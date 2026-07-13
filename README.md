@@ -42,6 +42,17 @@ The browser tests require Chromium. Install it once with:
 npx playwright install chromium
 ```
 
+## Production deployment
+
+Pull requests and pushes to `main` run the static and browser test suites in
+GitHub Actions. After a tested commit reaches `main`, the `Deploy production`
+job installs production dependencies on the Namecheap server, updates the
+Passenger application, restarts it, and verifies the public health endpoint.
+
+The deploy job uses the protected GitHub environment `prod` and its
+`NAMECHEAP_SSH_KEY` secret. Production deployments therefore only run from
+`main`; pull requests never receive the server key.
+
 ## Public routes
 
 - `/` — Markdown wiki index
