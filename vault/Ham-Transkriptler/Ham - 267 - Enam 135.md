@@ -1,0 +1,24 @@
+---
+title: "Ham Transkript — [Tefsir] Enam suresi: 135. ayet"
+type: "raw-transcript"
+review_status: "machine-edited"
+editorial_level: "light"
+row_id: 267
+surah_key: "enam"
+surah: "En‘âm"
+surah_number: 6
+ayah_start: 135
+ayah_end: 135
+---
+
+# Ham Transkript — [Tefsir] Enam suresi: 135. ayet
+
+> [!warning] Değiştirilmemiş kaynak
+> Bu sayfa yerel `media_transcriptions` tablosundaki metni aynen korur.
+
+Yazılı sürüm: [[267 - Enam 135]]
+Video: https://www.youtube.com/watch?v=eJrC0mONiiE
+
+---
+
+135. ayetten devam edelim. Ayet mealen şöyledir. De ki, "Ey kavmi, gücünüz yettiğince yapacağınızı yapın. Ben de yapıyorum. Yakında dünya yurdunun sonunun kimin olduğunu bileceksiniz. Muhakkak zalimler kurtuluşa eremezler." Hım. Burada dünya kelimesi zaten parantez içinde. Yani Elmalı Hoca bunu dünyanın sonunun kimin olduğunu bileceksiniz şeklinde anlamamızı istiyor. Ama başka bir açıklaması da var bunun. Ona da geleceğim. Ama sanki daha önceki alt başlık kapanmış ve Allahu Teala şimdi Resulullah'ın sallallahu aleyhi ve sellem müşriklere birebir vermesi gereken cevabı açıklıyor burada. Ve cevap da kimedir? Yani bu cümleyi kime söylemesi lazım? Anlatılan işte vaatlerin ardından ahireti ve dirilmeyi inkar edenleri tehdit şeklinde gelen bir ayettir. Ayette geçen gücünüz yettiğince yapacağınızı yapın ifadesidir. Bu cümlenin içinde mekanı kelimesi geçiyor. Mekanı kelimesi bir çevirisi yani mekandır. Mekan biliyoruz nedir? Ama başka bir çevirisi birisinin bir yere iyice yerleşmesi demektir. Yani cümlenin anlamı gücünüz yettiğince yapacağınızı yapın ben de yapıyorum cümlesi o zaman ne anlamlara gelebilir? İki tane farklı anlamı olması lazım. Birincisi şudur. Müşrikler çünkü İslam'a karşı bayağı bir düşman tavrı ortaya koymuşlar ve birçok kötülükler yapıyorlar Müslümanlara. Ondan sonra Resulullah'a karşı da düşmanlık yapıyorlar. Hem açık hem gizli. Ondan sonra Müslümanların tabii ki gıybetini de yapıyorlar. Birçok iftiralarda da bulunuyorlar. Başka kavimleri Müslümanların aleyhinde çevirmek için. Ve bunları yaptıkça sanki ayette Resulullah onlara diyor ki, "Gücünüz yettiğince yapacağınızı yapın." Yani sizin yapacağınız sizden tabii ki daha güçlü olan Allah var ve Allah bize yardım edecektir. Siz yapacağınızı yapın, ben de yapıyorum. Ondan sonra da kimin sonunun ne olacağını göreceğiz. Ama bunun bir ikinci anlamı da dediğim gibi bu mekanı kelimesini ikinci çevirisine göre cümlenin anlamı şöyle olur. Siz bulunduğunuz hal üzre kalmaya devam edin ve o şekilde ne yapıyorsanız o şekilde yapmaya devam edin. Ben de bulunduğum hal üzere kalmaya devam edeceğim ve ben de kendi işlerimi o doğrultuda yapacağım. Ondan sonra bakalım kimin sonu ne olur şeklinde. Yani gelin birbirimize düşmanlık yapalım. Yapabildiğimizin hepsini yapalım. Ondan sonra kim galip gelecek şeklinde değil de yani siz kendi yolunuzda devam edin. Ben de kendi yolumda devam edeyim. Ondan sonra bakalım kimin sonu ne oluyor şeklinde. Bu ayette dediğim gibi dünya kelimesi parantezde Elmalı hoca kullanmış. O zaman ayetten kafirin dünya yurdunun güzel neticesine nail olmasının imkansız olduğunu mu anlamamız lazım? Eğer öyle anlarsak biraz çelişkili olur. Çünkü birçok müşrik ve hatta birçok İslam düşmanının ve hatta birçok insanlık düşmanının bu dünyada hiç de fena olmayan neticeler elde ettiğini biliyoruz ve görüyoruz. O zaman ayeti nasıl anlamamız lazım? İmam Razi diyor ki ayete göre akıbet kafirin aleyhinde olur. Bu kesinlikle böyledir. Başka türlü olamaz. Ama durum şöyledir. Eğer bir insan imanlıysa ve dünyaya Kur'an-ı Kerim'in verdiği basiretle bakıyorsa, gözlükle bakıyorsa o zaman kafirin sonunun iyi olmadığını bu dünyada bile görür ve anlar. Ama kafirin kendisi de bunu görür ama dünyada görmez. Onu ahirette görür. Yani o da bilir de sonunun kötü olduğunu o da bilir. Ama o bilme artık geç olur. Ahirette olur. Ayetten çıkan anlam odur. Yoksa ayet dünyada kafirler hiçbir şey elde edemezler şeklinde anlaşılması doğru değildir. Ve ayetin son cümlesi de muhakkak zalimler kurtuluşa eremezler şeklindedir. Hatta buradaki kesinlik katiyet bayağı güçlüdür. Bunu Suat Yıldırım hoca sadece olarak muhakkak değil şöyle çevirmiş. Şu muhakkaktır ki zalimler felaha eremezler. Bu da neyi gösterir? Elinizden geleni yapın veya gücünüzün yettiğince yapacağınızı yapın. Ben de yapıyorum demek. O demin anlattığım ikinci anlamı biraz da şu açıdan destekler. Zalimler kurtuluşa eremezler. Bir haberdir. O yüzden hadi gidin müşriksiniz. Yapacağınız en işte müşrikliğin dibi neyse hepsini yapın şeklinde bu cümleyi anlamamız demek ki doğru değil. Ondan sonra ben de gidip yapacağımın en iyisini, en iyi Müslümanlık neyse ben de onu yapacağım. Ondan sonra bakalım kim kazanacak şeklinde değil. Demek ki bu son cümle de şunu gösteriyor ki, "Elin elinizden geleni yapın demek bir tehdit ve bir korkutmadır." Yani eğer bu yol üzre devam ederseniz, olduğunuz hal üzre devam ederseniz ne olur? Zalim olursunuz. Ve zalimler felaha eremezler.

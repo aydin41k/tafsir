@@ -1,0 +1,12 @@
+node_modules
+.venv
+test-results
+playwright-report
+.git
+.DS_Store
+archive
+data
+scripts
+supabase
+vault-next
+*.log

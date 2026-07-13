@@ -1,0 +1,18 @@
+# Passenger configuration for tafsir.salimov.site
+PassengerAppRoot "/home/saliynut/public_html/tafsir"
+PassengerBaseURI "/"
+PassengerNodejs "/opt/alt/alt-nodejs22/root/usr/bin/node"
+PassengerAppType node
+PassengerStartupFile app.js
+PassengerAppEnv production
+
+SetEnv NODE_ENV production
+SetEnv SITE_URL https://tafsir.salimov.site
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(?:vault|node_modules)(?:/|$) - [F,L]
+RewriteRule ^(?:app\.js|package(?:-lock)?\.json)$ - [F,L]
+</IfModule>

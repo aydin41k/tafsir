@@ -1,0 +1,24 @@
+---
+title: "Ham Transkript — A'râf suresi: 129. ayet [Tefsir]"
+type: "raw-transcript"
+review_status: "machine-edited"
+editorial_level: "light"
+row_id: 37
+surah_key: "araf"
+surah: "A‘râf"
+surah_number: 7
+ayah_start: 129
+ayah_end: 129
+---
+
+# Ham Transkript — A'râf suresi: 129. ayet [Tefsir]
+
+> [!warning] Değiştirilmemiş kaynak
+> Bu sayfa yerel `media_transcriptions` tablosundaki metni aynen korur.
+
+Yazılı sürüm: [[037 - Araf 129]]
+Video: https://www.youtube.com/watch?v=4Gz0g18qALA
+
+---
+
+19. ayet müallen şöyle bir kavmi dediler ki,  sen bize gelmeden önce de eziyet gördük, sen geldikten sonra da.  Evet, demek ki durum zor gitti ki içeride zora gidiyor.  Ondan sonra millet de şikayet ediyor.  Zaten konuş kaitten başlamıştı.  Yani şimdi ne yapacağız diye.  Hazreti Musa'ya bakıyorlar o da sabredin diyor.  Gün gelir, devran döner, her şey sizin elinize geçer.  Firavun da maf olur diyor.  Millet de diyor ki ama sen gelmeden önce de zaten eziyet görüyorduk.  Çünkü köle olarak kullanılıyorlardı.  Masır da hiçbir hukukları falan yok.  Belli ki Firavun da kafasına isteyin de erkeklerini öldürüyor.  İşte kadınlarını alıyor, kullanıyor falan.  Diyorlar ki, sen gelmeden önce de eziyet görüyorduk.  Şimdi sen gelmişsin hala eziyet görüyoruz.  Hala bize öldürecek diyor.  Hala elimizde bir hakkımız yok.  Hürriyetimiz yok.  Bu şekilde Musa'ya geliyorlar.  Bu durumun bazen fesirler demişler ki,  şikayet midir bu?  Yani durumlarından şikayetmediiyorlar Peygamber'e.  Yoksa yani şikayetten daha öte.  Peygamber'e karşı baş kaldırma olay mı var burada?  Çünkü dedikleri şey baya sert bir ifade.  Yani senin gelmenin, senin Peygamber'ı olmanın  bize ne faydası var?  gibisinden bir anlam çıkar bu ifadeden.  Ama bunun böyle olmaması gerek.  Neden?  Çünkü dediğim gibi daha sonraki ayetlerde  Hazreti Musa'nın kavmi veya etrafındaki ahudiler övilecektir.  O yüzden başkanlı fesirler demişler ki.  Onların yaptığı Hazreti Musa'ya veya Dine veya Haşa Allah'a karşı  baş kaldırma isyan etme değil.  Sadece olarak soru sormadır.  Diyorlar ki ortada değişen bir şey yok.  Durumunuz kötü düşünü de kötü.  Ne demek bu?  Yani bize açıkla bunu.  Yani bunun sonu ne olacak?  Sabret falan diyorsun da ama yani durum düzelmiyor.  Ne olacak bu?  O şekilde bir ifad edir.  Yani sadece olarak bilmek istiyorlar.  Ve Hazreti Musa'nın bu durumu onlara açıklamasını istiyorlar.  O yüzden böyle bir cümle kullanmışlar.  Hazreti Musa'da diyor ki cevabında umulur ki  Rabbiniz düşmanlarınızı helak edip de sizi  yer yüzünde halife kılacaktır.  Ve sizin nasıl işler yaptığınızda bakacaktır.  Evet.  Umulur ki diye başladı cümle.  Yani ayette geçen gala dedi ki  Asa umulur ki diye çevirilen kelime  bu asa kelimesidir.  Asada sadece olarak  yani unmak derken unmak kelimesi anlaşılması  biraz zor olabilir.  Asa kelimesi meselesibe vehtiyor ki  burada kullanılan şekli, ümit ve korkuyu ifade etmekdir.  Yani Rabbinizin düşmanlarınızı helak edip  sizi halife kılması için ümit edin.  Ama aina zamanda endişe değilim.  Endişe edin derken bunun için bir çaba da gösterir.  Bir uğraşın yani bunun ortaya çıkması için uğraşın  ve iyi akıbet için ümit edin.  Ondan sonra da diyor ki  Umulur ki Rabbiniz düşmanlarınızı helak edip  sizi yer yüzünde halife kılacak  ve ondan sonra ne diyor?  Yani bunun sanki şartı nedir?  Sizin nasıl işler yaptığınızda bakacaktır diyor.  Sizin nasıl işler yaptığınızda bakacaktır demek.  Yani sizin kurtulmanı sizin yaptığınız işlere bağlı demek.  Ama biraz cümle biraz garip cümle neden  çünkü bakacak gelecek zamanı ifade eder.  Allah'ın gelecek zamanda bir şey yapacağını  demek ne kadar doğru bir şeydir.  Allah teâlâ zamanla münezzetdir.  Allah bakacak ne demek?  Yani Allah'ın ilmiyle bunu  şimdiden bilmesi lazım.  Neden bekliyip de gelecek de bakacak.  Ayet de geçen zaten kelimeye baktığımızda  ayet de geçen nazara kelimesi  bazen görmek ya bazen bakmak  ifade etse de bazen ilim ile bilmek ifade eder.  Bazen de beklemek ifade eder.  Çünkü ayetlerde zaten çok husuk kullanılan  bir kelimedir zaten Kur'an-ı Kerim'de bazen de bekleme ifade eder.  Bazen de görme ifade eder.  Bazen bakma ifade eder.  Yani mesela insanın başını bir yonundan başka yöne çevirip  bir şeye bakmasını ifade eder.  Bazen sadece görmeyi ifade eder.  Bazen ilmiyle bilmeyi ifade eder.  Bazen de bir şeyin olmasını beklemeyi ifade eder.  Bu ayette mesela zedcez diyor ki  ayetin ifade ettiği şudur.  Cenab-ı Hak bu ayet ile o bunun sizden sadır olduğunu görsün demektir.  Yani Allah-u Teala için görmek  yani gelecekte bir şey göreceği falan söz konusu o değil.  Söz konusu gelecekte veya ilerde  Yahudi halkından bu şeylerin sadır olması  ve ortaya çıkmasıdır.  Burada kullanılan görme veya bakacaktır.  Yani gelecek zamanda bakacaktır  veya görmesi için yapın ki görsün  gibisinden gelecek zaman  Yahudilerin yapacağı işleri ifade etmek içindir.  Yoksa Allah-u Teala'nın gelecekte bekliği bir şey görme  istemezse deyildir.
