@@ -1,11 +1,19 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const baseURL = process.env.TEST_BASE_URL || "http://127.0.0.1:4173";
+
 export default defineConfig({
   testDir: "./tests",
   fullyParallel: true,
   reporter: "line",
+  webServer: {
+    command: "npm start",
+    url: new URL("/healthz", baseURL).href,
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
+  },
   use: {
-    baseURL: process.env.TEST_BASE_URL || "http://127.0.0.1:4173",
+    baseURL,
     trace: "retain-on-failure",
   },
   projects: [
