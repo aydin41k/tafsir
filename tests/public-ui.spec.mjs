@@ -44,7 +44,8 @@ test("search returns only genuine matches across the five surahs", async ({ requ
   expect(nisa.some((result) => result.href === "/sure/nisa/ayet/168")).toBeTruthy();
 
   const maide = await request.get("/api/search?q=adalet").then((response) => response.json());
-  expect(maide.some((result) => result.href.startsWith("/metin/") && result.range.startsWith("Mâide"))).toBeTruthy();
+  expect(maide.some((result) => result.href.startsWith("/sure/maide/ayet/") && result.href.includes("#kaynak-") && result.range.startsWith("Mâide"))).toBeTruthy();
+  expect(maide.some((result) => result.href.startsWith("/metin/"))).toBeFalsy();
 
   const faith = await request.get("/api/search?q=iman").then((response) => response.json());
   for (const surah of ["Âl-i İmrân", "Nisâ", "Mâide", "En‘âm", "A‘râf"]) {
@@ -53,6 +54,19 @@ test("search returns only genuine matches across the five surahs", async ({ requ
 
   const impossible = await request.get("/api/search?q=zzzyokturzzz").then((response) => response.json());
   expect(impossible).toEqual([]);
+});
+
+test("search opens full-text matches on the ayah page and highlights their source", async ({ page }) => {
+  await page.goto("/");
+  await page.keyboard.press("ControlOrMeta+K");
+  await page.locator("[data-search-input]").fill("adalet");
+  const sourceResult = page.locator(".search-result[href*='/sure/'][href*='#kaynak-']").first();
+  await expect(sourceResult).toBeVisible();
+  await sourceResult.click();
+
+  await expect(page).toHaveURL(/\/sure\/[^/]+\/ayet\/\d+#kaynak-\d+$/);
+  await expect(page.locator(".source-card:target")).toHaveCount(1);
+  await expect(page.locator(".source-card:target")).toBeInViewport();
 });
 
 test("written prose spells out sentence-initial numbers", async ({ page }) => {

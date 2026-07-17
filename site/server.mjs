@@ -246,7 +246,7 @@ function loadContent() {
         typeLabel: pageTypeLabel(page.type),
         range: formatRange(page),
         excerpt: page.excerpt,
-        href: publicPath(hrefFor(page)),
+        href: publicPath(searchHrefFor(page, query)),
       }));
   }
 
@@ -270,6 +270,19 @@ function hrefFor(page) {
   if (page.type === "tefsir-text") return `/metin/${Number(page.data.row_id)}`;
   if (page.type === "raw-transcript") return `/transkript/${Number(page.data.row_id)}`;
   return `/wiki/${encodeURIComponent(page.relative)}`;
+}
+
+function searchHrefFor(page, query = "") {
+  if (!["tefsir-text", "raw-transcript"].includes(page?.type)) return hrefFor(page);
+  const start = Number(page.data.ayah_start || page.data.ayah || 0);
+  const end = Number(page.data.ayah_end || start);
+  const requestedAyah = (String(query).match(/\d+/g) || [])
+    .map(Number)
+    .find((ayah) => ayah >= start && ayah <= end);
+  const ayah = requestedAyah || start;
+  const sourceId = Number(page.data.row_id);
+  if (!ayah || !sourceId) return hrefFor(page);
+  return `/sure/${surahFor(page).key}/ayet/${ayah}#kaynak-${sourceId}`;
 }
 
 function wikiLinks(text, seen = new Set()) {
@@ -317,7 +330,7 @@ function renderMarkdown(text, seen = new Set()) {
     const content = embeddedArticleContent(page);
     const range = formatRange(page);
     return `
-<section class="source-card" data-source-id="${escapeHtml(page.data.row_id || "")}">
+<section class="source-card" id="kaynak-${escapeHtml(page.data.row_id || "")}" data-source-id="${escapeHtml(page.data.row_id || "")}">
   <div class="source-card__topline">
     <div>
       <span class="eyebrow">${escapeHtml(range || pageTypeLabel(page.type))}</span>

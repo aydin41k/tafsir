@@ -1399,6 +1399,22 @@ kbd {
   box-shadow: var(--shadow-sm);
 }
 
+.source-card:target {
+  border-color: var(--gold);
+  background:
+    linear-gradient(color-mix(in srgb, var(--gold-soft) 45%, transparent), color-mix(in srgb, var(--gold-soft) 45%, transparent)),
+    var(--surface);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--gold) 22%, transparent), var(--shadow-md);
+  animation: source-card-highlight 900ms var(--ease);
+}
+
+@keyframes source-card-highlight {
+  from {
+    transform: translateY(8px);
+    box-shadow: 0 0 0 10px color-mix(in srgb, var(--gold) 32%, transparent), var(--shadow-md);
+  }
+}
+
 .source-card__topline {
   display: flex;
   align-items: flex-start;
