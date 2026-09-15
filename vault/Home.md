@@ -5,6 +5,7 @@ review_status: "machine-edited"
 editorial_level: "light"
 source_count: 393
 surah_count: 6
+book_count: 1
 ---
 # Yazılı Tefsir Kütüphanesi
 
@@ -21,6 +22,10 @@ surah_count: 6
 - [[Inceleme Panosu|İnceleme panosu]]
 - [[Metodoloji]]
 
+## Kitap
+
+- [[Furkan Gunu|Furkān Günü — Bedir Savaşı, 8 bölüm]]
+
 ## Editoryal ilke
 
 Bu wiki bir açıklamanın yeniden açıklaması değildir. Kaynak videonun anlatımı korunur; yalnızca dolgu sözler, yarım başlangıçlar, noktalama ve paragraf yapısı düzenlenir.
@@ -28,6 +33,8 @@ Bu wiki bir açıklamanın yeniden açıklaması değildir. Kaynak videonun anla
 - Yazılı kaynak metni: **393**
 - Ayet sayfası: **942**
 - Ham transkript: **393**
+
+Kütüphanenin bir de telif bölümü vardır. [[Furkan Gunu|Furkān Günü]], kanal anlatımlarının değil, kaynak kayıtların ve Enfâl sûresinin okunmasıyla yazılmış sekiz bölümlük bir kitaptır; usulü [[Metodoloji]] sayfasında ayrıca anlatılır.
 
 > [!warning] İnsan kontrolü
 > Arapça ibareler, özel isimler ve transkripsiyon belirsizlikleri editoryal kayıt bölümlerinde işaretlenmiştir.

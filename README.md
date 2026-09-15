@@ -6,9 +6,15 @@ A public, source-traceable reading edition of six **180 Saniyede Tefsir**
 video collections: Âl-i İmrân, Nisâ, Mâide, En‘âm, A‘râf, and Enfâl. The canonical
 articles are lightly edited transcripts, not summaries or new interpretations.
 
+Alongside the collections, the library publishes one original book,
+**Furkān Günü — Bedir Savaşı**. It is kept in a separate content class with its
+own provenance note so it is never confused with the transcript corpus.
+
 The public site includes:
 
 - 942 ayah pages and 393 full written tefsir texts across six sûra collections
+- *Furkān Günü*, an eight-chapter original book on the Battle of Badr, with an
+  appendix indexing every Enfâl ayah it rests on back to that ayah's page
 - An explicit source-gap notice for Âl-i İmrân 1–2, for which no matching channel video was found
 - Direct links from every edited text to its untouched transcript
 - Full-library search with `⌘/Ctrl K` and `/` shortcuts
@@ -61,6 +67,9 @@ The deploy job uses the protected GitHub environment `prod` and its
 - `/metinler` — provenance archive for the source texts embedded in ayah pages
 - `/metin/:id` — one lightly edited source article
 - `/transkript/:id` — the corresponding untouched transcript
+- `/kitap/furkan-gunu` — the book's index and colophon
+- `/kitap/furkan-gunu/bolum/:number` — one chapter, 1–8
+- `/kitap/furkan-gunu/dizin` — the Enfâl ayah index appendix
 - `/wiki/Metodoloji` — editorial method
 - `/api/search?q=...` — search API
 - `/healthz` — deployment health check
@@ -112,6 +121,7 @@ complete `vault/`. It does not require Supabase, PostgreSQL, or persistent disk.
 - `vault/Ham-Transkriptler/` — untouched database transcripts
 - `vault/Tefsir-Metinleri/` — very lightly edited written versions
 - `vault/Ayetler/` — per-sûra ayah pages embedding the narrowest applicable texts
+- `vault/Kitaplar/` — original books: chapters and appendices, one folder per book
 - `data/` — source metadata and cached processing output
 - `site/` — public Express application and frontend assets
 - `scripts/` — transcription, editing, audit, and vault-build pipeline

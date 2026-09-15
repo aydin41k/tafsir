@@ -129,7 +129,7 @@ updateProgress();
 try {
   const type = document.body.dataset.pageType;
   const url = document.body.dataset.pageUrl;
-  const resumable = ["ayah", "tefsir-text"].includes(type) && url;
+  const resumable = ["ayah", "tefsir-text", "book-chapter"].includes(type) && url;
   const saved = JSON.parse(localStorage.getItem("araf-last-read") || "null");
   const wantsResume = saved?.url === location.pathname && new URLSearchParams(location.search).has("resume");
   let saveTimer;
@@ -143,6 +143,7 @@ try {
       ayah: document.body.dataset.ayah,
       surah: document.body.dataset.surah,
       surahName: document.body.dataset.surahName,
+      book: document.body.dataset.book,
       progress: Math.min(1, scrollY / max),
       savedAt: Date.now(),
     }));
@@ -157,7 +158,9 @@ try {
     section.hidden = false;
     $("#continue-card").href = `${saved.url}?resume=1`;
     $("#continue-title").textContent = saved.title;
-    $("#continue-kicker").textContent = saved.type === "ayah" ? `${saved.surahName || "Sûre"} ${saved.ayah}` : "Yazılı tefsir";
+    $("#continue-kicker").textContent = saved.type === "ayah"
+      ? `${saved.surahName || "Sûre"} ${saved.ayah}`
+      : saved.type === "book-chapter" ? saved.book || "Kitap bölümü" : "Yazılı tefsir";
     $("#continue-time").textContent = saved.progress > 0.05 ? `%${Math.round(saved.progress * 100)} tamamlandı` : "Son okuduğunuz yer";
   }
   if (wantsResume && saved.progress > 0.02) {

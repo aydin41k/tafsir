@@ -1080,7 +1080,8 @@ kbd {
 }
 
 .text-hero h1,
-.raw-hero h1 {
+.raw-hero h1,
+.chapter-hero h1 {
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
 }
 
@@ -1387,6 +1388,55 @@ kbd {
 
 .prose--raw > * {
   max-width: none;
+}
+
+.prose--book > p:first-of-type {
+  color: var(--ink);
+  font-size: 1.08em;
+}
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 720px;
+  margin-top: 46px;
+  padding-top: 26px;
+  gap: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.chapter-nav__link {
+  display: flex;
+  max-width: 300px;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 17px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  text-decoration: none;
+}
+
+.chapter-nav__link:hover {
+  border-color: var(--emerald);
+}
+
+.chapter-nav__link span {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.chapter-nav__link strong {
+  color: var(--ink);
+  font-family: var(--font-reading);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.chapter-nav__link--next {
+  margin-left: auto;
+  text-align: right;
 }
 
 .source-card {
@@ -2447,6 +2497,18 @@ kbd {
   .prose--raw {
     padding: 20px;
     font-size: 12px;
+  }
+
+  .chapter-nav {
+    flex-direction: column;
+  }
+
+  .chapter-nav__link {
+    max-width: none;
+  }
+
+  .chapter-nav__link--next {
+    text-align: left;
   }
 
   .index-surface {

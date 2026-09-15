@@ -17,7 +17,7 @@ const BASE_PATH = configuredBasePath && configuredBasePath !== "/"
   ? `/${configuredBasePath.replace(/^\/+|\/+$/g, "")}`
   : "";
 const SITE_NAME = "Yazılı Tefsir Kütüphanesi";
-const DEFAULT_DESCRIPTION = "180 Saniyede Tefsir video transkriptlerinden hazırlanmış, kaynağa sadık Âl-i İmrân, Nisâ, Mâide, En‘âm, A‘râf ve Enfâl yazılı tefsirlerini okuyun.";
+const DEFAULT_DESCRIPTION = "180 Saniyede Tefsir video transkriptlerinden hazırlanmış, kaynağa sadık Âl-i İmrân, Nisâ, Mâide, En‘âm, A‘râf ve Enfâl yazılı tefsirlerini ve Bedir Savaşı'nı anlatan Furkān Günü kitabını okuyun.";
 const SURAHS = {
   "ali-imran": { key: "ali-imran", name: "Âl-i İmrân", number: 3, ayahCount: 200, mark: "٣", description: "İman, vahiy, Ehl-i kitap, Meryem ve Uhud etrafındaki anlatımlar." },
   nisa: { key: "nisa", name: "Nisâ", number: 4, ayahCount: 176, mark: "٤", description: "Aile, adalet, haklar ve toplum düzeni etrafındaki anlatımlar." },
@@ -25,6 +25,15 @@ const SURAHS = {
   enam: { key: "enam", name: "En‘âm", number: 6, ayahCount: 165, mark: "٦", description: "Tevhid, vahiy, peygamberlik ve şirk eleştirisi etrafındaki anlatımlar." },
   araf: { key: "araf", name: "A‘râf", number: 7, ayahCount: 206, mark: "٧", description: "İnsanlık kıssaları, kulluk, ahlak ve ilahî hitap etrafındaki anlatımlar." },
   enfal: { key: "enfal", name: "Enfâl", number: 8, ayahCount: 75, mark: "٨", description: "Bedir, ganimetler, iman, birlik ve savaş ahlakı etrafındaki anlatımlar." },
+};
+const BOOKS = {
+  "furkan-gunu": {
+    key: "furkan-gunu",
+    title: "Furkān Günü",
+    subtitle: "Bedir Savaşı",
+    chapterCount: 8,
+    description: "Bedir Savaşı'nın, İbn İshak, Vâkıdî ve İbn Sa'd kayıtlarıyla Enfâl sûresinin hadiseye değen âyetlerine dayanan sekiz bölümlük telif anlatısı.",
+  },
 };
 
 const app = express();
@@ -138,6 +147,10 @@ function surahFor(page) {
   return SURAHS.araf;
 }
 
+function bookFor(page) {
+  return BOOKS[String(page?.data?.book_key || "").toLowerCase()] || null;
+}
+
 function formatRange(page) {
   const start = Number(page?.data?.ayah_start || page?.data?.ayah || 0);
   const end = Number(page?.data?.ayah_end || start);
@@ -151,6 +164,9 @@ function pageTypeLabel(type) {
     "tefsir-text": "Yazılı tefsir",
     "raw-transcript": "Ham transkript",
     surah: "Sûre haritası",
+    book: "Kitap",
+    "book-chapter": "Kitap bölümü",
+    "book-appendix": "Kitap eki",
     index: "İndeks",
     methodology: "Metodoloji",
     dashboard: "İnceleme",
@@ -181,6 +197,9 @@ function loadContent() {
   const surahs = new Map();
   const articles = new Map();
   const transcripts = new Map();
+  const books = new Map();
+  const chapters = new Map();
+  const appendices = new Map();
   for (const page of pages) {
     lookup.set(page.relative.toLowerCase(), page);
     lookup.set(page.stem.toLowerCase(), page);
@@ -189,11 +208,18 @@ function loadContent() {
     if (page.type === "surah") surahs.set(surahFor(page).key, page);
     if (page.type === "tefsir-text") articles.set(Number(page.data.row_id), page);
     if (page.type === "raw-transcript") transcripts.set(Number(page.data.row_id), page);
+    if (page.type === "book" && bookFor(page)) books.set(bookFor(page).key, page);
+    if (page.type === "book-chapter" && bookFor(page)) chapters.set(`${bookFor(page).key}:${Number(page.data.chapter)}`, page);
+    if (page.type === "book-appendix" && bookFor(page)) appendices.set(bookFor(page).key, page);
   }
 
   const textArticles = pages
     .filter((page) => page.type === "tefsir-text")
     .sort((a, b) => surahFor(a).number - surahFor(b).number || Number(a.data.ayah_start) - Number(b.data.ayah_start) || Number(a.data.ayah_end) - Number(b.data.ayah_end) || a.title.localeCompare(b.title, "tr"));
+
+  const bookChapters = pages
+    .filter((page) => page.type === "book-chapter" && bookFor(page))
+    .sort((a, b) => bookFor(a).title.localeCompare(bookFor(b).title, "tr") || Number(a.data.chapter) - Number(b.data.chapter));
 
   function search(query, limit = 18) {
     const q = normalize(query).trim();
@@ -252,7 +278,7 @@ function loadContent() {
       }));
   }
 
-  return { pages, lookup, ayahs, surahs, articles, transcripts, textArticles, search };
+  return { pages, lookup, ayahs, surahs, articles, transcripts, books, chapters, appendices, textArticles, bookChapters, search };
 }
 
 const store = loadContent();
@@ -263,11 +289,20 @@ function surahLinks(className = "") {
     .join("");
 }
 
+function bookLinks(className = "") {
+  return Object.values(BOOKS)
+    .map((book) => `<a class="${className}" href="/kitap/${book.key}">${book.title}</a>`)
+    .join("");
+}
+
 function hrefFor(page) {
   if (!page) return "#";
   if (page.relative === "Home") return "/";
   if (page.type === "surah") return `/sure/${surahFor(page).key}`;
   if (page.relative === "Tefsir Metinleri Indeksi") return "/metinler";
+  if (bookFor(page) && page.type === "book") return `/kitap/${bookFor(page).key}`;
+  if (bookFor(page) && page.type === "book-chapter") return `/kitap/${bookFor(page).key}/bolum/${Number(page.data.chapter)}`;
+  if (bookFor(page) && page.type === "book-appendix") return `/kitap/${bookFor(page).key}/dizin`;
   if (page.type === "ayah") return `/sure/${surahFor(page).key}/ayet/${Number(page.data.ayah)}`;
   if (page.type === "tefsir-text") return `/metin/${Number(page.data.row_id)}`;
   if (page.type === "raw-transcript") return `/transkript/${Number(page.data.row_id)}`;
@@ -397,22 +432,39 @@ function ayahRanges(surah, currentAyah = 0) {
   }).join("");
 }
 
+function chapterSidebarLinks(book, currentChapter = 0) {
+  const links = store.bookChapters
+    .filter((page) => bookFor(page).key === book.key)
+    .map((page) => `<a class="sidebar-link ${Number(page.data.chapter) === currentChapter ? "is-active" : ""}" href="${hrefFor(page)}"><span>${escapeHtml(page.title)}</span><small>${Number(page.data.chapter)}. bölüm</small></a>`);
+  const appendix = store.appendices.get(book.key);
+  if (appendix) links.push(`<a class="sidebar-link ${currentChapter ? "" : "is-active"}" href="${hrefFor(appendix)}"><span>${escapeHtml(appendix.title)}</span><small>Ek</small></a>`);
+  return links.join("");
+}
+
 function sidebar(currentPage) {
   const currentAyah = Number(currentPage?.data?.ayah || currentPage?.data?.ayah_start || 0);
   const currentSurah = surahFor(currentPage);
+  const currentBook = bookFor(currentPage);
   const showAyahRanges = Boolean(currentPage?.data?.surah_key) && ["ayah", "surah", "tefsir-text", "raw-transcript"].includes(currentPage?.type);
+  const showChapters = Boolean(currentBook) && ["book-chapter", "book-appendix"].includes(currentPage?.type);
   const collectionLinks = Object.values(SURAHS).map((surah) => `<a class="sidebar-link ${currentSurah.key === surah.key && ["ayah", "surah"].includes(currentPage?.type) ? "is-active" : ""}" href="/sure/${surah.key}"><span>${surah.name}</span><small>${surah.ayahCount} ayet</small></a>`).join("");
+  const libraryBookLinks = Object.values(BOOKS).map((book) => `<a class="sidebar-link ${currentBook?.key === book.key && currentPage?.type === "book" ? "is-active" : ""}" href="/kitap/${book.key}"><span>${book.title}</span><small>${book.chapterCount} bölüm</small></a>`).join("");
   return `
     <div class="sidebar__inner">
       <div class="sidebar__section">
         <span class="sidebar__label">Kütüphane</span>
         <a class="sidebar-link ${currentPage?.relative === "Home" ? "is-active" : ""}" href="/"><span>Genel bakış</span><small>Başlangıç</small></a>
         ${collectionLinks}
+        ${libraryBookLinks}
         <a class="sidebar-link ${currentPage?.type === "methodology" ? "is-active" : ""}" href="/wiki/Metodoloji"><span>Metodoloji</span><small>Nasıl hazırlandı?</small></a>
       </div>
       ${showAyahRanges ? `<div class="sidebar__section sidebar__ranges">
         <span class="sidebar__label">${currentSurah.name} · ayete git</span>
         ${ayahRanges(currentSurah, currentAyah)}
+      </div>` : ""}
+      ${showChapters ? `<div class="sidebar__section">
+        <span class="sidebar__label">${currentBook.title} · bölüme git</span>
+        ${chapterSidebarLinks(currentBook, Number(currentPage?.data?.chapter || 0))}
       </div>` : ""}
       <div class="sidebar__foot">
         <span class="status-dot"></span>
@@ -427,6 +479,7 @@ function breadcrumbs(page) {
   if (page.type === "ayah") parent = { label: surahFor(page).name, href: `/sure/${surahFor(page).key}` };
   if (page.type === "tefsir-text") parent = { label: "Kaynak Arşivi", href: "/metinler" };
   if (page.type === "raw-transcript") parent = { label: "Kaynak arşivi", href: `/metin/${Number(page.data.row_id)}` };
+  if (bookFor(page) && ["book-chapter", "book-appendix"].includes(page.type)) parent = { label: bookFor(page).title, href: `/kitap/${bookFor(page).key}` };
   return `<nav class="breadcrumbs" aria-label="Sayfa yolu"><a href="/">Ana sayfa</a><span>/</span><a href="${parent.href}">${parent.label}</a><span>/</span><span>${escapeHtml(page.title)}</span></nav>`;
 }
 
@@ -439,6 +492,14 @@ function ayahChips(page) {
     .join("");
 }
 
+function chapterChips(page) {
+  const book = bookFor(page);
+  const current = Number(page.data.chapter || 0);
+  return Array.from({ length: book.chapterCount }, (_, index) => index + 1)
+    .map((chapter) => `<a href="/kitap/${book.key}/bolum/${chapter}" class="ayah-chip ${chapter === current ? "is-current" : ""}">${chapter}</a>`)
+    .join("");
+}
+
 function rightRail(page) {
   if (!page) return "";
   const toc = tocFor(page);
@@ -446,6 +507,7 @@ function rightRail(page) {
   const end = Number(page.data.ayah_end || start);
   const rowId = Number(page.data.row_id || 0);
   const raw = store.transcripts.get(rowId);
+  const book = bookFor(page);
   let primary = "";
   if (page.type === "ayah") {
     const ayah = Number(page.data.ayah);
@@ -453,9 +515,14 @@ function rightRail(page) {
     primary = `<div class="rail-card rail-nav"><span class="rail-label">Ayet navigasyonu</span><div class="rail-nav__buttons">${ayah > 1 ? `<a href="/sure/${surah.key}/ayet/${ayah - 1}">← ${ayah - 1}</a>` : "<span></span>"}${ayah < surah.ayahCount ? `<a href="/sure/${surah.key}/ayet/${ayah + 1}">${ayah + 1} →</a>` : ""}</div></div>`;
   } else if (page.type === "tefsir-text") {
     primary = `<div class="rail-card"><span class="rail-label">Kapsanan ayetler</span><div class="ayah-chips">${ayahChips(page)}</div>${raw ? `<a class="rail-action" href="${hrefFor(raw)}">Ham transkripti gör ${icon("arrow")}</a>` : ""}</div>`;
+  } else if (book && ["book-chapter", "book-appendix"].includes(page.type)) {
+    primary = `<div class="rail-card"><span class="rail-label">${escapeHtml(book.title)} · bölümler</span><div class="ayah-chips">${chapterChips(page)}</div><a class="rail-action" href="/kitap/${book.key}">Kitabın künyesi ${icon("arrow")}</a></div>`;
   }
   const tocHtml = toc.length ? `<div class="rail-card toc"><span class="rail-label">Bu sayfada</span>${toc.map((item) => `<a class="toc-${item.level}" href="#${item.id}">${escapeHtml(item.title)}</a>`).join("")}</div>` : "";
-  return `${primary}${tocHtml}<div class="rail-card rail-note"><span class="rail-label">Editoryal yaklaşım</span><p>Metin, konuşma dilinden yazı diline çok hafif müdahaleyle geçirilmiştir.</p><a href="/wiki/Metodoloji">Yöntemi incele</a></div>`;
+  const note = book
+    ? `<div class="rail-card rail-note"><span class="rail-label">Telif metin</span><p>Bu metin bir video transkripti değildir; kaynaklara bağlı olarak yazılmış telif bir anlatıdır.</p><a href="/wiki/Metodoloji#telif-kitap">Yöntemi incele</a></div>`
+    : `<div class="rail-card rail-note"><span class="rail-label">Editoryal yaklaşım</span><p>Metin, konuşma dilinden yazı diline çok hafif müdahaleyle geçirilmiştir.</p><a href="/wiki/Metodoloji">Yöntemi incele</a></div>`;
+  return `${primary}${tocHtml}${note}`;
 }
 
 function pageHero(page) {
@@ -470,6 +537,12 @@ function pageHero(page) {
   if (page.type === "raw-transcript") {
     return `<header class="page-hero raw-hero"><span class="eyebrow">Kaynak arşivi · Değiştirilmemiş metin</span><h1>${escapeHtml(page.title)}</h1><p>Bu sayfa yerel kaynak tablodaki transkripti aynen korur.</p></header>`;
   }
+  if (bookFor(page) && page.type === "book-chapter") {
+    return `<header class="page-hero chapter-hero"><span class="eyebrow">${escapeHtml(bookFor(page).title)} · ${Number(page.data.chapter)}. bölüm</span><h1>${escapeHtml(page.title)}</h1><div class="hero-meta"><span>${page.readingMinutes} dakika okuma</span><span>${Number(page.data.word_count || 0)} kelime</span><button class="copy-button" type="button" data-copy-link>${icon("copy")} Bağlantıyı kopyala</button></div></header>`;
+  }
+  if (bookFor(page) && page.type === "book-appendix") {
+    return `<header class="page-hero"><span class="eyebrow">${escapeHtml(bookFor(page).title)} · Ek</span><h1>${escapeHtml(page.title)}</h1></header>`;
+  }
   return `<header class="page-hero"><span class="eyebrow">${escapeHtml(pageTypeLabel(page.type))}</span><h1>${escapeHtml(page.title)}</h1></header>`;
 }
 
@@ -477,12 +550,22 @@ function stripTitle(content) {
   return content.replace(/^[ \t\r\n]*#\s+[^\n]+\n+/, "");
 }
 
+function chapterNav(page) {
+  const book = bookFor(page);
+  const chapter = Number(page.data.chapter);
+  const previous = store.chapters.get(`${book.key}:${chapter - 1}`);
+  const next = store.chapters.get(`${book.key}:${chapter + 1}`) || store.appendices.get(book.key);
+  const link = (target, direction, kicker) => `<a class="chapter-nav__link chapter-nav__link--${direction}" href="${hrefFor(target)}"><span>${kicker}</span><strong>${escapeHtml(target.title)}</strong></a>`;
+  return `<nav class="chapter-nav" aria-label="Bölüm navigasyonu">${previous ? link(previous, "previous", `← ${chapter - 1}. bölüm`) : "<span></span>"}${next ? link(next, "next", next.type === "book-appendix" ? "Ek →" : `${chapter + 1}. bölüm →`) : ""}</nav>`;
+}
+
 function renderContentPage(page) {
   let content = stripTitle(page.content);
   if (page.type === "ayah") content = content.replace(/^##\s+(?:Âl-i İmrân|Nisâ|Mâide|A[‘']râf|En[‘']âm)\s+\d+(?:–\d+)?\s*$/gm, "");
   const body = renderMarkdown(content, new Set([page.relative]));
-  const articleClass = page.type === "raw-transcript" ? "prose prose--raw" : "prose";
-  return `${pageHero(page)}<article class="${articleClass}">${body}</article>`;
+  const articleClass = page.type === "raw-transcript" ? "prose prose--raw" : page.type === "book-chapter" ? "prose prose--book" : "prose";
+  const footerNav = bookFor(page) && page.type === "book-chapter" ? chapterNav(page) : "";
+  return `${pageHero(page)}<article class="${articleClass}">${body}</article>${footerNav}`;
 }
 
 function fullAyahGrid(surah) {
@@ -500,8 +583,16 @@ function textIndexBody() {
   return `<header class="index-hero"><span class="eyebrow">Provenans ve kaynak kontrolü</span><h1>Kaynak Arşivi</h1><p>${store.textArticles.length} video anlatımının, ayet sayfalarında kullanılan kaynağa bağlı tam metinleri.</p></header><div class="filter-bar"><a class="filter-chip is-active" href="/metinler">Tümü <span>${store.textArticles.length}</span></a>${surahLinks("filter-chip")}<button class="filter-chip" type="button" data-open-search>Arşivde ara</button></div><section class="text-list">${cards}</section>`;
 }
 
+function bookIndexBody(book) {
+  const chapters = store.bookChapters.filter((page) => bookFor(page).key === book.key);
+  const appendix = store.appendices.get(book.key);
+  const words = chapters.reduce((total, page) => total + Number(page.data.word_count || 0), 0);
+  const cards = chapters.map((page) => `<article class="text-card"><div class="text-card__range">${Number(page.data.chapter)}. bölüm</div><div><h2><a href="${hrefFor(page)}">${escapeHtml(page.title)}</a></h2><p>${escapeHtml(page.excerpt)}</p><div class="text-card__meta"><span>${page.readingMinutes} dk</span><span>${Number(page.data.word_count || 0)} kelime</span></div></div><a class="text-card__arrow" href="${hrefFor(page)}" aria-label="Bölümü aç">${icon("arrow")}</a></article>`).join("");
+  return `<header class="index-hero"><span class="eyebrow">Telif kitap · ${book.chapterCount} bölüm · ${words.toLocaleString("tr-TR")} kelime</span><h1>${escapeHtml(book.title)}</h1><p>${escapeHtml(book.description)}</p></header><div class="filter-bar">${appendix ? `<a class="filter-chip" href="${hrefFor(appendix)}">${escapeHtml(appendix.title)}</a>` : ""}<a class="filter-chip" href="/sure/enfal">Enfâl koleksiyonu</a><a class="filter-chip" href="/wiki/Metodoloji#telif-kitap">Telif usulü</a></div><section class="text-list">${cards}</section>`;
+}
+
 function navigation(currentPage) {
-  return `<header class="site-header"><div class="header-inner"><button class="icon-button menu-button" type="button" data-toggle-sidebar aria-label="Menüyü aç">${icon("menu")}</button><a class="site-brand" href="/">${brandLogo()}<span><strong>Yazılı Tefsir</strong><small>Kaynak Kütüphanesi</small></span></a><nav class="desktop-nav" aria-label="Ana navigasyon"><a href="/#sureler">Sûreler</a><a href="/wiki/Metodoloji">Metodoloji</a></nav><div class="header-actions"><button class="search-trigger" type="button" data-open-search>${icon("search")}<span>Ara</span><kbd>⌘ K</kbd></button><button class="icon-button" type="button" data-theme-toggle aria-label="Temayı değiştir">${icon("sun")}</button></div></div></header>`;
+  return `<header class="site-header"><div class="header-inner"><button class="icon-button menu-button" type="button" data-toggle-sidebar aria-label="Menüyü aç">${icon("menu")}</button><a class="site-brand" href="/">${brandLogo()}<span><strong>Yazılı Tefsir</strong><small>Kaynak Kütüphanesi</small></span></a><nav class="desktop-nav" aria-label="Ana navigasyon"><a href="/#sureler">Sûreler</a>${bookLinks()}<a href="/wiki/Metodoloji">Metodoloji</a></nav><div class="header-actions"><button class="search-trigger" type="button" data-open-search>${icon("search")}<span>Ara</span><kbd>⌘ K</kbd></button><button class="icon-button" type="button" data-theme-toggle aria-label="Temayı değiştir">${icon("sun")}</button></div></div></header>`;
 }
 
 function searchDialog() {
@@ -509,7 +600,7 @@ function searchDialog() {
 }
 
 function footer() {
-  return `<footer class="site-footer"><div><a class="site-brand site-brand--footer" href="/">${brandLogo()}<span><strong>Yazılı Tefsir</strong><small>Kaynak Kütüphanesi</small></span></a><p>180 Saniyede Tefsir video anlatımlarının kaynağa sadık yazılı edisyonu.</p></div><div class="footer-links">${surahLinks()}<a href="/wiki/Metodoloji">Metodoloji</a><a href="https://www.youtube.com/@180saniyedetefsir" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></footer>`;
+  return `<footer class="site-footer"><div><a class="site-brand site-brand--footer" href="/">${brandLogo()}<span><strong>Yazılı Tefsir</strong><small>Kaynak Kütüphanesi</small></span></a><p>180 Saniyede Tefsir video anlatımlarının kaynağa sadık yazılı edisyonu.</p></div><div class="footer-links">${surahLinks()}${bookLinks()}<a href="/wiki/Metodoloji">Metodoloji</a><a href="https://www.youtube.com/@180saniyedetefsir" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></footer>`;
 }
 
 function shell({ req, title, description = DEFAULT_DESCRIPTION, body, page = null, layout = "reader" }) {
@@ -522,8 +613,10 @@ function shell({ req, title, description = DEFAULT_DESCRIPTION, body, page = nul
   const main = layout === "home"
     ? `<main class="home-main">${body}</main>`
     : `<div class="reader-shell"><aside class="sidebar" data-sidebar>${sidebar(page)}</aside><main class="reader-main">${breadcrumbs(page)}<div class="content-surface">${body}</div></main><aside class="right-rail">${rightRail(page)}</aside></div>`;
-  const jsonLd = page?.type === "tefsir-text" ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: page.title, description, isPartOf: { "@type": "CreativeWorkSeries", name: SITE_NAME }, mainEntityOfPage: canonical })}</script>` : "";
-  const html = `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10261f"><title>${escapeHtml(fullTitle)}</title><meta name="description" content="${escapeHtml(description)}"><link rel="canonical" href="${escapeHtml(canonical)}"><meta property="og:type" content="article"><meta property="og:title" content="${escapeHtml(fullTitle)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${escapeHtml(canonical)}"><meta property="og:site_name" content="${SITE_NAME}"><meta property="og:image" content="${escapeHtml(socialImage)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Yazılı Tefsir Kütüphanesi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${escapeHtml(socialImage)}"><link rel="icon" href="/assets/channel-logo.jpg" type="image/jpeg"><link rel="apple-touch-icon" href="/assets/channel-logo.jpg"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/assets/style.css">${jsonLd}<script>try{const t=localStorage.getItem('araf-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head><body data-base-path="${escapeHtml(BASE_PATH)}" data-page-title="${escapeHtml(page?.title || title)}" data-page-url="${escapeHtml(publicPath(req.path))}" data-page-type="${escapeHtml(page?.type || layout)}" data-surah="${currentSurah.key}" data-surah-name="${currentSurah.name}" data-ayah="${currentAyah}"><div class="reading-progress" data-reading-progress></div>${navigation(page)}${main}${footer()}${searchDialog()}<div class="toast" data-toast role="status"></div><script src="/assets/app.js" defer></script></body></html>`;
+  const jsonLd = page?.type === "tefsir-text" ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: page.title, description, isPartOf: { "@type": "CreativeWorkSeries", name: SITE_NAME }, mainEntityOfPage: canonical })}</script>`
+    : page?.type === "book-chapter" ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "Chapter", headline: page.title, position: Number(page.data.chapter), description, isPartOf: { "@type": "Book", name: bookFor(page)?.title }, mainEntityOfPage: canonical })}</script>`
+    : "";
+  const html = `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10261f"><title>${escapeHtml(fullTitle)}</title><meta name="description" content="${escapeHtml(description)}"><link rel="canonical" href="${escapeHtml(canonical)}"><meta property="og:type" content="article"><meta property="og:title" content="${escapeHtml(fullTitle)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${escapeHtml(canonical)}"><meta property="og:site_name" content="${SITE_NAME}"><meta property="og:image" content="${escapeHtml(socialImage)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Yazılı Tefsir Kütüphanesi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${escapeHtml(socialImage)}"><link rel="icon" href="/assets/channel-logo.jpg" type="image/jpeg"><link rel="apple-touch-icon" href="/assets/channel-logo.jpg"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/assets/style.css">${jsonLd}<script>try{const t=localStorage.getItem('araf-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head><body data-base-path="${escapeHtml(BASE_PATH)}" data-page-title="${escapeHtml(page?.title || title)}" data-page-url="${escapeHtml(publicPath(req.path))}" data-page-type="${escapeHtml(page?.type || layout)}" data-surah="${currentSurah.key}" data-surah-name="${currentSurah.name}" data-ayah="${currentAyah}" data-book="${escapeHtml(bookFor(page)?.title || "")}"><div class="reading-progress" data-reading-progress></div>${navigation(page)}${main}${footer()}${searchDialog()}<div class="toast" data-toast role="status"></div><script src="/assets/app.js" defer></script></body></html>`;
   return prefixInternalUrls(html);
 }
 
@@ -548,6 +641,13 @@ app.get("/sure/:surah", (req, res) => {
   res.send(shell({ req, title: surah.name, body: ayahIndexBody(surah), page: store.surahs.get(surah.key) }));
 });
 app.get("/metinler", (req, res) => res.send(shell({ req, title: "Kaynak Arşivi", body: textIndexBody(), page: store.lookup.get("tefsir metinleri indeksi") })));
+app.get("/kitap/:book", (req, res) => {
+  const book = BOOKS[String(req.params.book).toLowerCase()];
+  if (!book) return res.status(404).send(notFound(req));
+  res.send(shell({ req, title: book.title, description: book.description, body: bookIndexBody(book), page: store.books.get(book.key) }));
+});
+app.get("/kitap/:book/bolum/:number", (req, res) => servePage(req, res, store.chapters.get(`${String(req.params.book).toLowerCase()}:${Number(req.params.number)}`)));
+app.get("/kitap/:book/dizin", (req, res) => servePage(req, res, store.appendices.get(String(req.params.book).toLowerCase())));
 app.get("/sure/:surah/ayet/:number", (req, res) => servePage(req, res, store.ayahs.get(`${String(req.params.surah).toLowerCase()}:${Number(req.params.number)}`)));
 app.get("/ayetler", (_req, res) => res.redirect(301, publicPath("/sure/araf")));
 app.get("/ayet/:number", (req, res) => res.redirect(301, publicPath(`/sure/araf/ayet/${Number(req.params.number)}`)));
@@ -570,10 +670,10 @@ app.get("/robots.txt", (req, res) => {
 });
 app.get("/sitemap.xml", (req, res) => {
   const origin = (process.env.SITE_URL || `${req.protocol}://${req.get("host")}`).replace(/\/$/, "");
-  const urls = ["/", ...Object.values(SURAHS).map((surah) => `/sure/${surah.key}`), "/metinler", ...[...store.ayahs.values()].map(hrefFor), ...store.textArticles.map(hrefFor)];
+  const urls = ["/", ...Object.values(SURAHS).map((surah) => `/sure/${surah.key}`), "/metinler", ...Object.values(BOOKS).map((book) => `/kitap/${book.key}`), ...[...store.ayahs.values()].map(hrefFor), ...store.textArticles.map(hrefFor), ...store.bookChapters.map(hrefFor), ...[...store.appendices.values()].map(hrefFor)];
   res.type("application/xml").send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((url) => `<url><loc>${escapeHtml(origin + publicPath(url))}</loc></url>`).join("")}</urlset>`);
 });
-app.get("/healthz", (_req, res) => res.json({ ok: true, pages: store.pages.length, surahs: store.surahs.size, ayahs: store.ayahs.size, articles: store.textArticles.length }));
+app.get("/healthz", (_req, res) => res.json({ ok: true, pages: store.pages.length, surahs: store.surahs.size, ayahs: store.ayahs.size, articles: store.textArticles.length, books: store.books.size, chapters: store.bookChapters.length }));
 app.use((req, res) => res.status(404).send(notFound(req)));
 
 app.listen(PORT, HOST, () => console.log(`${SITE_NAME}: http://${HOST}:${PORT}`));
