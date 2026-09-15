@@ -1,0 +1,22 @@
+---
+title: "Ham Transkript — Enfal 35"
+type: "raw-transcript"
+review_status: "machine-edited"
+row_id: 398
+surah_key: "enfal"
+surah: "Enfâl"
+surah_number: 8
+ayah_start: 35
+ayah_end: 35
+---
+
+# Ham Transkript — Enfal 35
+
+> [!warning] Değiştirilmemiş kaynak
+> Bu sayfa hazırlanmış kaynak kaydındaki metni aynen korur.
+
+Yazılı sürüm: [[398 - Enfal 35]]
+
+---
+
+Ondan sonra 30 peşinci ayetten de konunun devamı olarak  KB huzurunda onların doğalar ise ıslık çalıp el çırpmaktan başka bir şey değildir.  O halde inkarınızdan, venankörlüğünüzden dolayı bu azabı tadın bakalım.  Evet, azabın demek ki sebebi burada noktalanmış oluyor, sebepler silsilesi.  En sonunda da denen şey nedir?  Mescide aramdan insanları menediyorsunuz, orada olur olmaz işler yapıyorsunuz.  Ondan sonra bir de ıslık çalıp el çırpmak derken, bazımı fesirliler demişler ki  bunu demindediğim gibi insanları menetmek cümlesine bağlamışlar.  Yani mümürler orada ibadet etmeye çalışırken, onları rahatsız etmek için  onların yanında veya onların etrafında ve yaşlı kavenin yakalında  hatta birbirilerine akıl veriyorlar diyorlar ki, hadi hep birlikte el çırpalım,  işte ıslık çalın falan, gürültü yapalım, bir şeyler yapalım yani ortam karışsın.  Ama bazı fesirliler demişler ki, bu da onların esasında ibadetlerinin bir parçasıydı.  Yani onların kendilerinin uydurdukları kabileyi çıplak tavaf etmek ve yaşta  gündüzleyin bunlar tavaf etsin, geceleyin onlar tavaf etsin falan.  Bu uydurdukları şeyler bir tarafa, bir de orada ıslık çalıp el çırpmak gibi veya işte  ayetleş bu şekilde anlatılıyor ama mesela günümüzde özellikle bu  yani daha ilkel kalan kabilelerin falan, rituallerini düşünceki olursak  onlar da işte ayak çırpıyorlar, el çırpıyorlar, dans, türünden bir şeyler yapıyorlar.  Yani ismini ibadet koyarak, bu da onların ibadeti diyen müfesirliler diyorlar ki,  onların ibadetlerinin bir parçasıydı ve Allah taala diyor ki böyle bir ibadet yok.  Hiçbir zamanda olmadı.  Kabeye yapan, Hazreti İbrahim'e böyle bir şey emredilmedi.  Ondan sonra da hiçbir peygamberle böyle bir şey gelmedi.  Bunların hepsi onların kendilerinden uydurduğu ve hiç de yakışık almayan  bir ibadet türüdür yani ismini ibadet koydukları bir şeydir.  Ve onların yaptığı bundan başka bir şey değildi yani, sadece olarak bundan ibadet  Allah ta böyle bir şey emretmedi, hoşda görmüyor.  O zaman nasıl olur da biz kabenin hizmetkarı izleyip de oraya işte sahip çıkıyorlar.  Böyle bir şey akıl işi değil.  Ve sonunda da deniyor ki o halde inkarınızdan devam eden küfürünüzden  veya küfür kelimesini nankörlük şekilinde de tabii ki çevirebiliriz.  Zaten parantezden okuyoruz mi aldın?  Ve nankörlüğün üzerindorlayı bu azabı tadım bakalım deniyor.  Bu azabı derken de yani bu azab konusu dedik ki, bu silsilah sebeplerin içinde  azap onlara bedir günü gelmiş olan azap olabilir.  Çünkü zaten suur ev bedir savaşta sonrası olmuş olaylar üzerine olduğu için  bedir günü müşiklerin başını gelen onlara azap olarak ifade edilmiş.  Ama belki ondan başka, belki de onun üzerine bir de ahirette onların başını gelecek olan  ve talacakları çok büyük bir azap da vardır.  Ve ayetin sonunda vurgulana bu azap da onlardan ibaretleri diye tefsirde geliyor.

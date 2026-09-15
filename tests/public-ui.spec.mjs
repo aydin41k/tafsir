@@ -6,7 +6,7 @@ test("home is the wiki index and exposes the searchable library", async ({ page 
   await expect(page.locator(".site-header .brand-mark")).toHaveAttribute("src", "/assets/channel-logo.jpg");
   await expect(page.locator(".home-hero, .surah-card")).toHaveCount(0);
   await expect(page.locator(".site-header a[href='/metinler'], [data-sidebar] a[href='/metinler'], .site-footer a[href='/metinler']")).toHaveCount(0);
-  for (const href of ["ali-imran", "nisa", "maide", "enam", "araf"]) {
+  for (const href of ["ali-imran", "nisa", "maide", "enam", "araf", "enfal"]) {
     await expect(page.locator(`a[href='/sure/${href}']`).first()).toBeVisible();
   }
 
@@ -36,10 +36,10 @@ test("ayah reader renders source-faithful articles without vault syntax", async 
 test("source archive remains available as a secondary provenance view", async ({ page }) => {
   await page.goto("/metinler");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Kaynak Arşivi");
-  await expect(page.locator(".text-card")).toHaveCount(331);
+  await expect(page.locator(".text-card")).toHaveCount(393);
 });
 
-test("search returns only genuine matches across the five surahs", async ({ request }) => {
+test("search returns only genuine matches across the six surahs", async ({ request }) => {
   const nisa = await request.get("/api/search?q=Nisâ%20168").then((response) => response.json());
   expect(nisa.some((result) => result.href === "/sure/nisa/ayet/168")).toBeTruthy();
 
@@ -48,7 +48,7 @@ test("search returns only genuine matches across the five surahs", async ({ requ
   expect(maide.some((result) => result.href.startsWith("/metin/"))).toBeFalsy();
 
   const faith = await request.get("/api/search?q=iman").then((response) => response.json());
-  for (const surah of ["Âl-i İmrân", "Nisâ", "Mâide", "En‘âm", "A‘râf"]) {
+  for (const surah of ["Âl-i İmrân", "Nisâ", "Mâide", "En‘âm", "A‘râf", "Enfâl"]) {
     expect(faith.some((result) => result.range.startsWith(surah))).toBeTruthy();
   }
 
@@ -67,6 +67,12 @@ test("search opens full-text matches on the ayah page and highlights their sourc
   await expect(page).toHaveURL(/\/sure\/[^/]+\/ayet\/\d+#kaynak-\d+$/);
   await expect(page.locator(".source-card:target")).toHaveCount(1);
   await expect(page.locator(".source-card:target")).toBeInViewport();
+});
+
+test("search links a ranged source only to an ayah where it is embedded", async ({ request }) => {
+  const results = await request.get("/api/search?q=Enfal%202-3").then((response) => response.json());
+  const source = results.find((result) => result.title === "Enfal 2-3");
+  expect(source?.href).toBe("/sure/enfal/ayet/3#kaynak-377");
 });
 
 test("written prose spells out sentence-initial numbers", async ({ page }) => {
@@ -94,6 +100,16 @@ test("new surah collections expose covered and intentionally missing ayahs", asy
 
   await page.goto("/sure/maide/ayet/6");
   await expect(page.locator(".source-card").first()).toBeVisible();
+
+  await page.goto("/sure/enfal/ayet/75");
+  await expect(page.locator(".source-card").first()).toBeVisible();
+
+  await page.goto("/sure/enfal/ayet/1");
+  await expect(page.locator(".source-card")).toHaveCount(3);
+  await expect(page.locator(".source-card iframe[src*='youtube-nocookie.com/embed/hC9aWGqbGtI']")).toHaveCount(1);
+
+  await page.goto("/sure/enfal/ayet/67");
+  await expect(page.locator(".source-card")).toHaveCount(2);
 });
 
 test("mobile navigation opens and leads to the ayah index", async ({ page }, testInfo) => {

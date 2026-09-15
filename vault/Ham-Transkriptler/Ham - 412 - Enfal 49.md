@@ -1,0 +1,22 @@
+---
+title: "Ham Transkript — Enfal 49"
+type: "raw-transcript"
+review_status: "machine-edited"
+row_id: 412
+surah_key: "enfal"
+surah: "Enfâl"
+surah_number: 8
+ayah_start: 49
+ayah_end: 49
+---
+
+# Ham Transkript — Enfal 49
+
+> [!warning] Değiştirilmemiş kaynak
+> Bu sayfa hazırlanmış kaynak kaydındaki metni aynen korur.
+
+Yazılı sürüm: [[412 - Enfal 49]]
+
+---
+
+Ondan sonra 49. ayette o sırada münafıklar ve kalplerinde hastalık bulunanlar şu adamları dinleri aldakta diyorlardı.  Ve bunun Müslümanlar hakkında diyorlar.  Mühale bu şekilde okuyoruz.  Bunun önceki ayetle yani direk bağlantısı yoktur diyorum amurazı.  Yani bir önceki ayette nokta konuldu ve bu yeni başlık şekilindedir.  Yeni başlık, yeni konuyu başlanmıştır.  Ve yeni konuda neden ibaretdir?  Bunafıklar ve kalplerinde hastalık bulunanlar.  Bunlar da kimlerdir?  Bunu baştan bir konuşursak.  Mühnafıklar medine de biliyorsunuz en sar çoğunlukla iki kabilerden ibaretli, evs ve hazır aç kabilerin.  Ama o kabilerin içinde herkes samimi Müslüman olmamıştı.  Ve bazılarının hatta Müslümanlara ve hatta Rasulullah'a sallallahu aleyhi ve sellem.  Bir takım zoluklar çıkardığını da biliyoruz zaten siyardan.  Ve buradaki mühnafıkların evs ve hazır aç kabilerinden olan mühnafıklar oldu.  Söyleniyor tefsirde.  Ve kalplerinde hastalık bulunanlar da Mekkeli Müslümanlar ama Müslüman olmuşlar, yeni Müslüman olmuşlar.  İslam kalplerine iyice yerleşmemiş ve hicret etmemişler.  Mekke'de kalmaktalar ve bedir günü gelince ne oluyor?  Bir kere bayağı bir malları var kervanda.  O mallı kurtarmak tabii ki istiyorlar.  İkincisi de açıkta da Müslüman değiller zaten.  Ama şöyle düşünüyorlar, savaşı gidelim.  Ondan sonra duruma göre bakalım.  Eğer Mekke kazanırsa, Ebu Cihil kazanırsa o zaman işte Muzaffer ordunun neferleri olarak geri döneceğiz.  Yok baktık. Ebu Cihil kaybediyor.  O zaman yani açıkta Müslüman olduğumuzu beyan edip Müslümanlar tarafa geçeriz.  Yani kaybettiyemiz bir şey yok.  diye savaşa katılmış olanlar da olmuştur diye açıklanıyor tefsirde.  Ama Muhammed bin İsak diyor ki bu kalbinde hastalık olanların hepsi bedir günü, müşşik ordusunun içinde öldürülmüş oldu.  Demek ki bu insanlar ne diyorlarmış?  Münafıklar ve kalplerinde hastalık bulunanlar.  Müslümanlar için diyorlar ki şu adamları dinlere aldattı.  Şu adamları dinlere aldattı demek dinleri ne diyerek aldattı.  Ebu Cihil Abbas diyor ki, eğer sen bin kişiye karşı üç yüz kişiyiyle savaşa çıkıyorsan, meydan savaşına çıkıyorsan,  senin kendi dinine aşırı şekilde güvenmen gerekiyor olması lazım.  Dinine bu kadar güvenle birisinin ortaya çıkması, öbür tarafın ona dini bunu aldattı demesine.  Sadece olarak sebef olur. Yani müslüman olmayan için, müslümanın böyle bir şey yapması, dininin onu kandırıyor olması gibi gözüküyor.  Bir de ikinci konuda nedir?  İkinci konuda, yani belki müslümanlara her zaman gayrı müslümlerden üstün yapan veya müminleri, mümin olmayanlardan üstün yapan şöyle bir şey vardır.  Bunu demin de söyledim.  Savaşı giderken mümin ya kazanıp gazet olmak için gidiyor ya da ölüp şehit olmak için gidiyor ve her türlü kazancam diyor.  Kaybetçe bir şey yok ve bu şekilde güvenle savaşa gidiyor ve bu güvenin sayesinde de müslümanlar birçok savaşları,  dezavantajlı olmalarına rağmen kazanmışlardır.  Ve kendine değil de Rabbine ve dinine bu şekilde güvenme mümin olmayan birisine kenardan dininin aldatması gibi gözüküyor.  Yani onların yorumu sadece olarak bu şekilde olabilir.  Onlar yani bundan ötesini anlamıyorlar zaten.  Ve ayet de bize bunu açıklamaktadır.  Ve devamında ayet diyor ki oysa her kim Allah'a tevkül ederse,  bilsin ki Allah galiptir güçlüdür ve hikmet sahibidir.  Galiptir güçlüdür, hikmet sahibidir derken yani aziz ve hakimdir, ayette bu şekilde geçiyor.  Yani aziz demek, onu hiçbir şey malup edemez, Allah galiptir o yüzden bu şekilde çevrilmiş.  İkinci size hakim yani Allah'a hikmet sahibidir.  Tabii ki ama alınan öte düşmanına azap verir, dostlarına rahmet ve sevap ulaştırır.

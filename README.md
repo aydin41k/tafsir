@@ -2,13 +2,13 @@
 
 Live site: https://tafsir.salimov.site
 
-A public, source-traceable reading edition of five **180 Saniyede Tefsir**
-video collections: Âl-i İmrân, Nisâ, Mâide, En‘âm, and A‘râf. The canonical
+A public, source-traceable reading edition of six **180 Saniyede Tefsir**
+video collections: Âl-i İmrân, Nisâ, Mâide, En‘âm, A‘râf, and Enfâl. The canonical
 articles are lightly edited transcripts, not summaries or new interpretations.
 
 The public site includes:
 
-- 867 ayah pages and 331 full written tefsir texts across five sûra collections
+- 942 ayah pages and 393 full written tefsir texts across six sûra collections
 - An explicit source-gap notice for Âl-i İmrân 1–2, for which no matching channel video was found
 - Direct links from every edited text to its untouched transcript
 - Full-library search with `⌘/Ctrl K` and `/` shortcuts
@@ -56,7 +56,7 @@ The deploy job uses the protected GitHub environment `prod` and its
 ## Public routes
 
 - `/` — Markdown wiki index
-- `/sure/ali-imran`, `/sure/nisa`, `/sure/maide`, `/sure/enam`, and `/sure/araf` — per-sûra ayah explorers
+- `/sure/ali-imran`, `/sure/nisa`, `/sure/maide`, `/sure/enam`, `/sure/araf`, and `/sure/enfal` — per-sûra ayah explorers
 - `/sure/:surah/ayet/:number` — one ayah and its narrowest applicable source texts
 - `/metinler` — provenance archive for the source texts embedded in ayah pages
 - `/metin/:id` — one lightly edited source article

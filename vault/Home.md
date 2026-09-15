@@ -3,8 +3,8 @@ title: "Yazılı Tefsir Kütüphanesi"
 type: "index"
 review_status: "machine-edited"
 editorial_level: "light"
-source_count: 331
-surah_count: 5
+source_count: 393
+surah_count: 6
 ---
 # Yazılı Tefsir Kütüphanesi
 
@@ -17,6 +17,7 @@ surah_count: 5
 - [[Maide|Mâide — 120 ayet]]
 - [[Enam|En‘âm — 165 ayet]]
 - [[Araf|A‘râf — 206 ayet]]
+- [[Enfal|Enfâl — 75 ayet]]
 - [[Inceleme Panosu|İnceleme panosu]]
 - [[Metodoloji]]
 
@@ -24,9 +25,9 @@ surah_count: 5
 
 Bu wiki bir açıklamanın yeniden açıklaması değildir. Kaynak videonun anlatımı korunur; yalnızca dolgu sözler, yarım başlangıçlar, noktalama ve paragraf yapısı düzenlenir.
 
-- Yazılı kaynak metni: **331**
-- Ayet sayfası: **867**
-- Ham transkript: **331**
+- Yazılı kaynak metni: **393**
+- Ayet sayfası: **942**
+- Ham transkript: **393**
 
 > [!warning] İnsan kontrolü
 > Arapça ibareler, özel isimler ve transkripsiyon belirsizlikleri editoryal kayıt bölümlerinde işaretlenmiştir.

@@ -14,12 +14,13 @@
     "surah:ali-imran": "python3 scripts/ingest_surah.py ali-imran all",
     "surah:nisa": "python3 scripts/ingest_surah.py nisa all",
     "surah:maide": "python3 scripts/ingest_surah.py maide all",
+    "enfal:import": "python3 scripts/import_enfal_snapshot.py",
     "surahs:populate": "python3 scripts/ingest_surah.py ali-imran all && python3 scripts/ingest_surah.py nisa all && python3 scripts/ingest_surah.py maide all",
     "surahs:audit": "python3 scripts/ingest_surah.py ali-imran audit && python3 scripts/ingest_surah.py nisa audit && python3 scripts/ingest_surah.py maide audit && python3 scripts/ingest_surah.py enam audit",
     "review": "node site/server.mjs",
     "test:ui": "playwright test",
     "editorial:check": "python3 scripts/editorial_style.py --check vault/Tefsir-Metinleri",
-    "check": "python3 -m py_compile scripts/pipeline.py scripts/ingest_surah.py scripts/build_wiki.py scripts/build_prose_pilot.py scripts/build_prose_wiki.py scripts/editorial_style.py scripts/transcribe_helper.py && python3 scripts/editorial_style.py --check vault/Tefsir-Metinleri && node --check site/server.mjs && node --check site/assets/app.js"
+    "check": "python3 -m py_compile scripts/pipeline.py scripts/ingest_surah.py scripts/import_enfal_snapshot.py scripts/build_wiki.py scripts/build_prose_pilot.py scripts/build_prose_wiki.py scripts/editorial_style.py scripts/transcribe_helper.py && python3 scripts/editorial_style.py --check vault/Tefsir-Metinleri && node --check site/server.mjs && node --check site/assets/app.js"
   },
   "dependencies": {
     "compression": "^1.8.1",

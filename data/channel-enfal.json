@@ -1,0 +1,498 @@
+[
+  {
+    "local_id": 372,
+    "remote_id": 161,
+    "file_name": "Enfal 1 (1).mp3",
+    "ayah_start": 1,
+    "ayah_end": 1,
+    "source_url": "https://www.youtube.com/watch?v=hC9aWGqbGtI"
+  },
+  {
+    "local_id": 373,
+    "remote_id": 162,
+    "file_name": "Enfal 1 (2).mp3",
+    "ayah_start": 1,
+    "ayah_end": 1,
+    "source_url": null
+  },
+  {
+    "local_id": 374,
+    "remote_id": 163,
+    "file_name": "Enfal 2 (1).mp3",
+    "ayah_start": 2,
+    "ayah_end": 2,
+    "source_url": "https://www.youtube.com/watch?v=HYwLTk4H9ts"
+  },
+  {
+    "local_id": 375,
+    "remote_id": 164,
+    "file_name": "Enfal 2 (2).mp3",
+    "ayah_start": 2,
+    "ayah_end": 2,
+    "source_url": null
+  },
+  {
+    "local_id": 376,
+    "remote_id": 165,
+    "file_name": "Enfal sebebi nuzul.mp3",
+    "ayah_start": 1,
+    "ayah_end": 1,
+    "source_url": null
+  },
+  {
+    "local_id": 377,
+    "remote_id": 170,
+    "file_name": "Enfal 2-3.mp3",
+    "ayah_start": 2,
+    "ayah_end": 3,
+    "source_url": null
+  },
+  {
+    "local_id": 378,
+    "remote_id": 171,
+    "file_name": "Enfal 4 (1).mp3",
+    "ayah_start": 4,
+    "ayah_end": 4,
+    "source_url": null
+  },
+  {
+    "local_id": 379,
+    "remote_id": 172,
+    "file_name": "Enfal 4 (2).mp3",
+    "ayah_start": 4,
+    "ayah_end": 4,
+    "source_url": null
+  },
+  {
+    "local_id": 380,
+    "remote_id": 174,
+    "file_name": "Enfal 11-12.mp3",
+    "ayah_start": 11,
+    "ayah_end": 12,
+    "source_url": null
+  },
+  {
+    "local_id": 381,
+    "remote_id": 175,
+    "file_name": "Enfal 13.mp3",
+    "ayah_start": 13,
+    "ayah_end": 13,
+    "source_url": null
+  },
+  {
+    "local_id": 382,
+    "remote_id": 176,
+    "file_name": "Enfal 5.mp3",
+    "ayah_start": 5,
+    "ayah_end": 5,
+    "source_url": null
+  },
+  {
+    "local_id": 383,
+    "remote_id": 177,
+    "file_name": "Enfal 6-8.mp3",
+    "ayah_start": 6,
+    "ayah_end": 8,
+    "source_url": null
+  },
+  {
+    "local_id": 384,
+    "remote_id": 178,
+    "file_name": "Enfal 9-10.mp3",
+    "ayah_start": 9,
+    "ayah_end": 10,
+    "source_url": null
+  },
+  {
+    "local_id": 385,
+    "remote_id": 180,
+    "file_name": "Enfal 14.mp3",
+    "ayah_start": 14,
+    "ayah_end": 14,
+    "source_url": null
+  },
+  {
+    "local_id": 386,
+    "remote_id": 181,
+    "file_name": "Enfal 15-16.mp3",
+    "ayah_start": 15,
+    "ayah_end": 16,
+    "source_url": null
+  },
+  {
+    "local_id": 387,
+    "remote_id": 182,
+    "file_name": "Enfal 17.mp3",
+    "ayah_start": 17,
+    "ayah_end": 17,
+    "source_url": null
+  },
+  {
+    "local_id": 388,
+    "remote_id": 183,
+    "file_name": "Enfal 18-19.mp3",
+    "ayah_start": 18,
+    "ayah_end": 19,
+    "source_url": null
+  },
+  {
+    "local_id": 389,
+    "remote_id": 184,
+    "file_name": "Enfal 20-22.mp3",
+    "ayah_start": 20,
+    "ayah_end": 22,
+    "source_url": null
+  },
+  {
+    "local_id": 390,
+    "remote_id": 185,
+    "file_name": "Enfal 23.mp3",
+    "ayah_start": 23,
+    "ayah_end": 23,
+    "source_url": null
+  },
+  {
+    "local_id": 391,
+    "remote_id": 186,
+    "file_name": "Enfal 24.mp3",
+    "ayah_start": 24,
+    "ayah_end": 24,
+    "source_url": null
+  },
+  {
+    "local_id": 392,
+    "remote_id": 187,
+    "file_name": "Enfal 25-26.mp3",
+    "ayah_start": 25,
+    "ayah_end": 26,
+    "source_url": null
+  },
+  {
+    "local_id": 393,
+    "remote_id": 188,
+    "file_name": "Enfal 27-28.mp3",
+    "ayah_start": 27,
+    "ayah_end": 28,
+    "source_url": null
+  },
+  {
+    "local_id": 394,
+    "remote_id": 189,
+    "file_name": "Enfal 29.mp3",
+    "ayah_start": 29,
+    "ayah_end": 29,
+    "source_url": null
+  },
+  {
+    "local_id": 395,
+    "remote_id": 191,
+    "file_name": "Enfal 30-31.mp3",
+    "ayah_start": 30,
+    "ayah_end": 31,
+    "source_url": null
+  },
+  {
+    "local_id": 396,
+    "remote_id": 192,
+    "file_name": "Enfal 32-33.mp3",
+    "ayah_start": 32,
+    "ayah_end": 33,
+    "source_url": null
+  },
+  {
+    "local_id": 397,
+    "remote_id": 193,
+    "file_name": "Enfal 34.mp3",
+    "ayah_start": 34,
+    "ayah_end": 34,
+    "source_url": null
+  },
+  {
+    "local_id": 398,
+    "remote_id": 194,
+    "file_name": "Enfal 35.mp3",
+    "ayah_start": 35,
+    "ayah_end": 35,
+    "source_url": null
+  },
+  {
+    "local_id": 399,
+    "remote_id": 195,
+    "file_name": "Enfal 36.mp3",
+    "ayah_start": 36,
+    "ayah_end": 36,
+    "source_url": null
+  },
+  {
+    "local_id": 400,
+    "remote_id": 196,
+    "file_name": "Enfal 37.mp3",
+    "ayah_start": 37,
+    "ayah_end": 37,
+    "source_url": null
+  },
+  {
+    "local_id": 401,
+    "remote_id": 198,
+    "file_name": "Enfal 38.mp3",
+    "ayah_start": 38,
+    "ayah_end": 38,
+    "source_url": null
+  },
+  {
+    "local_id": 402,
+    "remote_id": 199,
+    "file_name": "Enfal 39-40.mp3",
+    "ayah_start": 39,
+    "ayah_end": 40,
+    "source_url": null
+  },
+  {
+    "local_id": 403,
+    "remote_id": 200,
+    "file_name": "Enfal 42.mp3",
+    "ayah_start": 42,
+    "ayah_end": 42,
+    "source_url": null
+  },
+  {
+    "local_id": 404,
+    "remote_id": 201,
+    "file_name": "Enfal 43.mp3",
+    "ayah_start": 43,
+    "ayah_end": 43,
+    "source_url": null
+  },
+  {
+    "local_id": 405,
+    "remote_id": 202,
+    "file_name": "Enfal 44.mp3",
+    "ayah_start": 44,
+    "ayah_end": 44,
+    "source_url": null
+  },
+  {
+    "local_id": 406,
+    "remote_id": 203,
+    "file_name": "Enfal 41.mp3",
+    "ayah_start": 41,
+    "ayah_end": 41,
+    "source_url": null
+  },
+  {
+    "local_id": 407,
+    "remote_id": 205,
+    "file_name": "Enfal 45.mp3",
+    "ayah_start": 45,
+    "ayah_end": 45,
+    "source_url": null
+  },
+  {
+    "local_id": 408,
+    "remote_id": 206,
+    "file_name": "Enfal 46.mp3",
+    "ayah_start": 46,
+    "ayah_end": 46,
+    "source_url": null
+  },
+  {
+    "local_id": 409,
+    "remote_id": 207,
+    "file_name": "Enfal 47.mp3",
+    "ayah_start": 47,
+    "ayah_end": 47,
+    "source_url": null
+  },
+  {
+    "local_id": 410,
+    "remote_id": 208,
+    "file_name": "Enfal 48.mp3",
+    "ayah_start": 48,
+    "ayah_end": 48,
+    "source_url": null
+  },
+  {
+    "local_id": 411,
+    "remote_id": 209,
+    "file_name": "Enfal 50-51.mp3",
+    "ayah_start": 50,
+    "ayah_end": 51,
+    "source_url": null
+  },
+  {
+    "local_id": 412,
+    "remote_id": 211,
+    "file_name": "Enfal 49.mp3",
+    "ayah_start": 49,
+    "ayah_end": 49,
+    "source_url": null
+  },
+  {
+    "local_id": 413,
+    "remote_id": 212,
+    "file_name": "Enfal 52-53.mp3",
+    "ayah_start": 52,
+    "ayah_end": 53,
+    "source_url": null
+  },
+  {
+    "local_id": 414,
+    "remote_id": 213,
+    "file_name": "Enfal 54.mp3",
+    "ayah_start": 54,
+    "ayah_end": 54,
+    "source_url": null
+  },
+  {
+    "local_id": 415,
+    "remote_id": 214,
+    "file_name": "Enfal 55-56.mp3",
+    "ayah_start": 55,
+    "ayah_end": 56,
+    "source_url": null
+  },
+  {
+    "local_id": 416,
+    "remote_id": 216,
+    "file_name": "Enfal 57.mp3",
+    "ayah_start": 57,
+    "ayah_end": 57,
+    "source_url": null
+  },
+  {
+    "local_id": 417,
+    "remote_id": 217,
+    "file_name": "Enfal 58-59.mp3",
+    "ayah_start": 58,
+    "ayah_end": 59,
+    "source_url": null
+  },
+  {
+    "local_id": 418,
+    "remote_id": 218,
+    "file_name": "Enfal 60.mp3",
+    "ayah_start": 60,
+    "ayah_end": 60,
+    "source_url": null
+  },
+  {
+    "local_id": 419,
+    "remote_id": 219,
+    "file_name": "Enfal 61.mp3",
+    "ayah_start": 61,
+    "ayah_end": 61,
+    "source_url": null
+  },
+  {
+    "local_id": 420,
+    "remote_id": 220,
+    "file_name": "Enfal 62.mp3",
+    "ayah_start": 62,
+    "ayah_end": 62,
+    "source_url": null
+  },
+  {
+    "local_id": 421,
+    "remote_id": 221,
+    "file_name": "Enfal 63.mp3",
+    "ayah_start": 63,
+    "ayah_end": 63,
+    "source_url": null
+  },
+  {
+    "local_id": 422,
+    "remote_id": 222,
+    "file_name": "Enfal 64.mp3",
+    "ayah_start": 64,
+    "ayah_end": 64,
+    "source_url": null
+  },
+  {
+    "local_id": 423,
+    "remote_id": 223,
+    "file_name": "Enfal 65.mp3",
+    "ayah_start": 65,
+    "ayah_end": 65,
+    "source_url": null
+  },
+  {
+    "local_id": 424,
+    "remote_id": 224,
+    "file_name": "Enfal 66.mp3",
+    "ayah_start": 66,
+    "ayah_end": 66,
+    "source_url": null
+  },
+  {
+    "local_id": 425,
+    "remote_id": 225,
+    "file_name": "Enfal 67-1.mp3",
+    "ayah_start": 67,
+    "ayah_end": 67,
+    "source_url": null
+  },
+  {
+    "local_id": 426,
+    "remote_id": 227,
+    "file_name": "Enfal 67-2.mp3",
+    "ayah_start": 67,
+    "ayah_end": 67,
+    "source_url": null
+  },
+  {
+    "local_id": 427,
+    "remote_id": 229,
+    "file_name": "Enfal 68-69.mp3",
+    "ayah_start": 68,
+    "ayah_end": 69,
+    "source_url": null
+  },
+  {
+    "local_id": 428,
+    "remote_id": 230,
+    "file_name": "Enfal 70.mp3",
+    "ayah_start": 70,
+    "ayah_end": 70,
+    "source_url": null
+  },
+  {
+    "local_id": 429,
+    "remote_id": 231,
+    "file_name": "Enfal 71.mp3",
+    "ayah_start": 71,
+    "ayah_end": 71,
+    "source_url": null
+  },
+  {
+    "local_id": 430,
+    "remote_id": 232,
+    "file_name": "Enfal 72.mp3",
+    "ayah_start": 72,
+    "ayah_end": 72,
+    "source_url": null
+  },
+  {
+    "local_id": 431,
+    "remote_id": 234,
+    "file_name": "Enfal 73.mp3",
+    "ayah_start": 73,
+    "ayah_end": 73,
+    "source_url": null
+  },
+  {
+    "local_id": 432,
+    "remote_id": 235,
+    "file_name": "Enfal 74.mp3",
+    "ayah_start": 74,
+    "ayah_end": 74,
+    "source_url": null
+  },
+  {
+    "local_id": 433,
+    "remote_id": 236,
+    "file_name": "Enfal 75.mp3",
+    "ayah_start": 75,
+    "ayah_end": 75,
+    "source_url": null
+  }
+]

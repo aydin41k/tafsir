@@ -17,13 +17,14 @@ const BASE_PATH = configuredBasePath && configuredBasePath !== "/"
   ? `/${configuredBasePath.replace(/^\/+|\/+$/g, "")}`
   : "";
 const SITE_NAME = "Yazılı Tefsir Kütüphanesi";
-const DEFAULT_DESCRIPTION = "180 Saniyede Tefsir video transkriptlerinden hazırlanmış, kaynağa sadık Âl-i İmrân, Nisâ, Mâide, En‘âm ve A‘râf yazılı tefsirlerini okuyun.";
+const DEFAULT_DESCRIPTION = "180 Saniyede Tefsir video transkriptlerinden hazırlanmış, kaynağa sadık Âl-i İmrân, Nisâ, Mâide, En‘âm, A‘râf ve Enfâl yazılı tefsirlerini okuyun.";
 const SURAHS = {
   "ali-imran": { key: "ali-imran", name: "Âl-i İmrân", number: 3, ayahCount: 200, mark: "٣", description: "İman, vahiy, Ehl-i kitap, Meryem ve Uhud etrafındaki anlatımlar." },
   nisa: { key: "nisa", name: "Nisâ", number: 4, ayahCount: 176, mark: "٤", description: "Aile, adalet, haklar ve toplum düzeni etrafındaki anlatımlar." },
   maide: { key: "maide", name: "Mâide", number: 5, ayahCount: 120, mark: "٥", description: "Ahitler, helâl-haram, şahitlik ve sorumluluk etrafındaki anlatımlar." },
   enam: { key: "enam", name: "En‘âm", number: 6, ayahCount: 165, mark: "٦", description: "Tevhid, vahiy, peygamberlik ve şirk eleştirisi etrafındaki anlatımlar." },
   araf: { key: "araf", name: "A‘râf", number: 7, ayahCount: 206, mark: "٧", description: "İnsanlık kıssaları, kulluk, ahlak ve ilahî hitap etrafındaki anlatımlar." },
+  enfal: { key: "enfal", name: "Enfâl", number: 8, ayahCount: 75, mark: "٨", description: "Bedir, ganimetler, iman, birlik ve savaş ahlakı etrafındaki anlatımlar." },
 };
 
 const app = express();
@@ -133,6 +134,7 @@ function surahFor(page) {
   if (name.includes("nisa")) return SURAHS.nisa;
   if (name.includes("maide")) return SURAHS.maide;
   if (name.includes("enam")) return SURAHS.enam;
+  if (name.includes("enfal") || name.includes("anfal")) return SURAHS.enfal;
   return SURAHS.araf;
 }
 
@@ -279,9 +281,15 @@ function searchHrefFor(page, query = "") {
   const requestedAyah = (String(query).match(/\d+/g) || [])
     .map(Number)
     .find((ayah) => ayah >= start && ayah <= end);
-  const ayah = requestedAyah || start;
   const sourceId = Number(page.data.row_id);
-  if (!ayah || !sourceId) return hrefFor(page);
+  if (!sourceId) return hrefFor(page);
+  const embedsSource = (ayah) => store.ayahs
+    .get(`${surahFor(page).key}:${ayah}`)
+    ?.content.includes(`![[${page.stem}]]`);
+  const ayah = requestedAyah && embedsSource(requestedAyah)
+    ? requestedAyah
+    : Array.from({ length: end - start + 1 }, (_, index) => start + index).find(embedsSource);
+  if (!ayah) return hrefFor(page);
   return `/sure/${surahFor(page).key}/ayet/${ayah}#kaynak-${sourceId}`;
 }
 

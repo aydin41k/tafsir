@@ -26,6 +26,7 @@ SURAHS = {
     "maide": {"key": "maide", "name": "Mâide", "stem": "Maide", "number": 5, "ayah_count": 120, "mark": "٥", "allowed_missing_ayahs": []},
     "enam": {"key": "enam", "name": "En‘âm", "stem": "Enam", "number": 6, "ayah_count": 165, "mark": "٦", "allowed_missing_ayahs": []},
     "araf": {"key": "araf", "name": "A‘râf", "stem": "Araf", "number": 7, "ayah_count": 206},
+    "enfal": {"key": "enfal", "name": "Enfâl", "stem": "Enfal", "number": 8, "ayah_count": 75, "mark": "٨", "allowed_missing_ayahs": []},
 }
 
 
@@ -72,7 +73,8 @@ def frontmatter(title: str, kind: str, **extra) -> str:
 def write(relative: str, content: str) -> None:
     path = STAGING / relative
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content.rstrip() + "\n", encoding="utf-8")
+    clean = "\n".join(line.rstrip() for line in content.splitlines()).rstrip()
+    path.write_text(clean + "\n", encoding="utf-8")
 
 
 def load_rows() -> tuple[list[dict], dict[int, dict]]:
@@ -408,6 +410,7 @@ def build_vault(rows: list[dict], source_by_row: dict[int, dict], results: dict[
 - [[Maide|Mâide — 120 ayet]]
 - [[Enam|En‘âm — 165 ayet]]
 - [[Araf|A‘râf — 206 ayet]]
+- [[Enfal|Enfâl — 75 ayet]]
 - [[Inceleme Panosu|İnceleme panosu]]
 - [[Metodoloji]]
 
@@ -459,13 +462,14 @@ Metinler, kanalın Türkçe video sohbetlerinin transkriptlerinden hazırlanır.
 
 ### Bu wikiye dâhil edilen kapsam
 
-Bu sürüm, kanaldan seçilmiş **{len(rows)} ayet tefsiri videosunu** ve bunların kapsadığı beş sûre koleksiyonunu içerir:
+Bu sürüm, kanaldan seçilmiş **{len(rows)} ayet tefsiri videosunu** ve bunların kapsadığı altı sûre koleksiyonunu içerir:
 
 - **Âl-i İmrân:** 3–200. ayetler. 1–2. ayetleri kapsayan bir kanal videosu tespit edilmediği için bu iki sayfa açıkça kaynaksız olarak işaretlenmiştir.
 - **Nisâ:** 1–176. ayetler.
 - **Mâide:** 1–120. ayetler.
 - **En‘âm:** 1–165. ayetler.
 - **A‘râf:** 1–206. ayetler.
+- **Enfâl:** 1–75. ayetler.
 
 Kanalın diğer sûreleri ve bu koleksiyona alınmamış videoları mevcut sürümün kapsamı dışındadır. Toplam **{total_ayahs} ayet sayfası** bulunur; bir video birden fazla ayeti kapsayabilir ve bir ayet için birden fazla dar kapsamlı sohbet gösterilebilir.
 
@@ -503,7 +507,86 @@ Bu nedenle okuyucu, yazılı metinden ham transkripte ve oradan mevcut olduğund
     (obsidian / "graph.json").write_text(json.dumps({"collapse-filter": True, "showTags": True, "showAttachments": False, "colorGroups": []}, indent=2) + "\n")
 
 
-def validate() -> dict:
+def preserve_snapshot_enfal(database_rows: list[dict]) -> int:
+    """Carry the additive Enfal snapshot through database-backed full rebuilds."""
+    manifest_path = ROOT / "data/channel-enfal.json"
+    enfal_rows = [row for row in database_rows if row.get("_surah_key") == "enfal"]
+    if enfal_rows:
+        if len(enfal_rows) != 62:
+            raise RuntimeError(f"Refusing partial database-backed Enfal rebuild: {len(enfal_rows)}/62 rows")
+        return 0
+    if not manifest_path.exists():
+        raise RuntimeError("Enfal snapshot manifest is missing; refusing to activate an empty Enfal collection")
+
+    inventory = json.loads(manifest_path.read_text(encoding="utf-8"))
+    ids = [int(item["local_id"]) for item in inventory]
+    coverage = {
+        ayah
+        for item in inventory
+        for ayah in range(int(item["ayah_start"]), int(item["ayah_end"]) + 1)
+    }
+    database_ids = {int(row["id"]) for row in database_rows}
+    if len(inventory) != 62 or len(ids) != len(set(ids)) or set(ids) & database_ids:
+        raise RuntimeError("Enfal snapshot source IDs are incomplete, duplicated, or collide with database rows")
+    if min(ids) <= max(database_ids, default=0) or coverage != set(range(1, 76)):
+        raise RuntimeError("Enfal snapshot IDs or ayah coverage failed validation")
+
+    for item in inventory:
+        stem = f"{int(item['local_id']):03d} - {Path(item['file_name']).stem}"
+        for folder, name in (
+            ("Tefsir-Metinleri", f"{stem}.md"),
+            ("Ham-Transkriptler", f"Ham - {stem}.md"),
+        ):
+            source = VAULT / folder / name
+            if not source.exists():
+                raise RuntimeError(f"Enfal snapshot file is missing: {source}")
+            shutil.copy2(source, STAGING / folder / name)
+    source_ayahs = VAULT / "Ayetler/Enfal"
+    if len(list(source_ayahs.glob("*.md"))) != 75:
+        raise RuntimeError("Enfal snapshot must contain exactly 75 ayah pages")
+    shutil.copytree(source_ayahs, STAGING / "Ayetler/Enfal", dirs_exist_ok=True)
+    shutil.copy2(VAULT / "Enfal.md", STAGING / "Enfal.md")
+
+    total_sources = len(database_rows) + len(inventory)
+    home_path = STAGING / "Home.md"
+    home = home_path.read_text(encoding="utf-8")
+    home = re.sub(r"source_count: \d+", f"source_count: {total_sources}", home, count=1)
+    home = re.sub(r"- Yazılı kaynak metni: \*\*\d+\*\*", f"- Yazılı kaynak metni: **{total_sources}**", home)
+    home = re.sub(r"- Ham transkript: \*\*\d+\*\*", f"- Ham transkript: **{total_sources}**", home)
+    home_path.write_text(home, encoding="utf-8")
+
+    methodology_path = STAGING / "Metodoloji.md"
+    methodology = methodology_path.read_text(encoding="utf-8")
+    methodology = re.sub(r"seçilmiş \*\*\d+ ayet tefsiri videosunu\*\*", f"seçilmiş **{total_sources} ayet tefsiri videosunu**", methodology)
+    methodology_path.write_text(methodology, encoding="utf-8")
+
+    index_path = STAGING / "Tefsir Metinleri Indeksi.md"
+    index = index_path.read_text(encoding="utf-8")
+    index = re.sub(r"source_count: \d+", f"source_count: {total_sources}", index, count=1)
+    heading = "## Enfâl\n"
+    before = index.split(heading, 1)[0].rstrip()
+    entries = []
+    for item in sorted(inventory, key=lambda value: (int(value["ayah_start"]), int(value["ayah_end"]), value["file_name"])):
+        start, end = int(item["ayah_start"]), int(item["ayah_end"])
+        stem = f"{int(item['local_id']):03d} - {Path(item['file_name']).stem}"
+        label = f"Enfâl {start}" + (f"–{end}" if end != start else "")
+        entries.append(f"- [[{stem}|{label} — {Path(item['file_name']).stem}]]")
+    index_path.write_text(before + "\n\n" + heading + "\n" + "\n".join(entries) + "\n", encoding="utf-8")
+
+    dashboard_path = STAGING / "Inceleme Panosu.md"
+    dashboard = dashboard_path.read_text(encoding="utf-8")
+    prefix = dashboard.split("## Enfâl\n", 1)[0].rstrip()
+    table = ["## Enfâl", "", "| Ayet | Kullanılan metin | Durum |", "|---:|---:|---|"]
+    for ayah in range(1, 76):
+        covering = [item for item in inventory if int(item["ayah_start"]) <= ayah <= int(item["ayah_end"])]
+        minimum = min(int(item["ayah_end"]) - int(item["ayah_start"]) for item in covering)
+        count = sum(int(item["ayah_end"]) - int(item["ayah_start"]) == minimum for item in covering)
+        table.append(f"| [[Enfal {ayah:03d}|{ayah}]] | {count} | Hafif editörlü; insan kontrolü bekliyor |")
+    dashboard_path.write_text(prefix + "\n\n" + "\n".join(table) + "\n", encoding="utf-8")
+    return len(inventory)
+
+
+def validate(expected_sources: int | None = None) -> dict:
     files = list(STAGING.rglob("*.md"))
     keys = set()
     for path in files:
@@ -520,8 +603,8 @@ def validate() -> dict:
     article_pages = len(list((STAGING / "Tefsir-Metinleri").glob("*.md")))
     raw_pages = len(list((STAGING / "Ham-Transkriptler").glob("*.md")))
     expected_ayahs = sum(surah["ayah_count"] for surah in SURAHS.values())
-    if ayah_pages != expected_ayahs or unresolved:
-        raise RuntimeError(f"Vault validation failed: ayahs={ayah_pages}, unresolved={sorted(unresolved)}")
+    if ayah_pages != expected_ayahs or unresolved or (expected_sources is not None and (article_pages != expected_sources or raw_pages != expected_sources)):
+        raise RuntimeError(f"Vault validation failed: ayahs={ayah_pages}, articles={article_pages}, raw={raw_pages}, expected_sources={expected_sources}, unresolved={sorted(unresolved)}")
     return {"markdown_files": len(files), "ayah_pages": ayah_pages, "article_pages": article_pages, "raw_pages": raw_pages, "unresolved_links": 0}
 
 
@@ -548,7 +631,8 @@ def main() -> int:
             if completed % 4 == 0 or completed == len(rows):
                 print(f"Converted {completed}/{len(rows)} sources ({cached_count} cached)", flush=True)
     build_vault(rows, source_by_row, results)
-    report = validate()
+    preserved_count = preserve_snapshot_enfal(rows)
+    report = validate(expected_sources=len(rows) + preserved_count)
     archived = activate()
     report.update({"active_vault": str(VAULT), "archived_vault": str(archived) if archived else None})
     print(json.dumps(report, ensure_ascii=False, indent=2))

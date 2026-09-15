@@ -1,0 +1,22 @@
+---
+title: "Ham Transkript — Enfal 57"
+type: "raw-transcript"
+review_status: "machine-edited"
+row_id: 416
+surah_key: "enfal"
+surah: "Enfâl"
+surah_number: 8
+ayah_start: 57
+ayah_end: 57
+---
+
+# Ham Transkript — Enfal 57
+
+> [!warning] Değiştirilmemiş kaynak
+> Bu sayfa hazırlanmış kaynak kaydındaki metni aynen korur.
+
+Yazılı sürüm: [[416 - Enfal 57]]
+
+---
+
+Ahti Bozman'ın sonucu peki nedir?  Dediki akurayza oğulları ile Rasulullah antlaşmayı yeniliyor.  Ama bu böyle mi yapılması gerek yani doğru olan her zaman bu mudur?  57. ayet şöyle diyor.  Bundan dolayı onları harpte yakalarsan kendilerinden sonrakilere de  göz daha olacak şekilde ağır bir cezaya çarptır.  Belki ibret alırlar.  Elmalı oca biraz hafif çevirmiş.  Ayetin kullandığı ifadeler daha ağırdır.  Bir kere 57. ayetin tefsirine geçmeden şunu hatırlamamızda fayda vardır herhalde.  Kur'an-i Kerim de pek çok ayette.  Rasulullah, hahb salihalı, hahb salim.  Allah'tığa alığa yumuşak olmayı, nazi ki olmayı emrediyor ve bunu teşvik ediyor.  Ki aile imran suretiğinden hatırlayacaksınız.  Uhud savaşlı sonucunda müslümanların yaptıklar yani bazılarının yaptığı çok büyük hatalar ve yanlışlar vardı.  Sonuçta işte büyük kayıplar verildi ve saat.  o konunun peşinden Allah'a teâlâ yorum olarak şöyle diyor,  Ali İmran soresinin yüz elli dokuzuncağı etinde,  sen o zaman sırf Allah'ın rahmetiyle onlara karşı yumşak davrandın.  Eğer kaba katı yürekli olsaydın, onlar senin etrafından dağılıp giderlerdi.  Artık onları sen bağışla, onlar için Allah'tan mahfret dile.  Yapacağın işlerde onlara da danış bir kere de azmettim mi?  Artık Allah'a da yan diye ayet devam ediyor.  Ve başka bir örnek en bir yağ soresinin yüz yedinci ayetinde vardır.  Bu da bildiğimiz meşhur ayetlerden bir tanesidir.  Ey Muhammed diye işte parantezde.  Biz seni ancak alemlere rahmet olarak gönderdik.  Mealen böyle bir ayet.  Demek ki Kur'an-ı Kerim'de birçok yerde Peygamber'in yumşak nazik olması, merhametli olması,  teşvik edilmesine rağmen bazı ayetlerde ceza uygulması  ve konunun ciddiliğine müthenasip olarak, konunun ciddiliğine orantılı olarak  onun uygulaması gereken cezalarında ağırlığının fazlıllaşmasını okuyoruz.  Bu ayet de onlara bir örnekdir.  Allah'a teâlâ demek ki her defasında ayetlerini bozanlardan bahsedince diyor ki  onları tegüf ve kelimesi var ayetle.  Yani tegüf eyle geçirmek demek yakalamak demek.  Ve harp'te yakalarsan diye meallede eklenmiş başına.  Harpte onları ne zaman yakalarsan onlara vaşarrid diyor okuyoruz.  Yani teşrit demek ızdırap vererek dağıtmak demek.  diyelim bir kaç demek kuşları diyelim veya koyunları ve hayvanları.  Ürküterek kaçırmak demek.  Yani kelimenin lukat anlamı odur.  Yani insanlara uygularsak bu kelimeyi de ızdırap vererek dağıtmak anlamına gelir.  Ama ayet de ne demek olabilir bu?  Onları yakalarsan ızdırap vererek dağıt veya ürküterek kaçır ne demek.  Yakaladığın insanlara demek ki öyle bir ağır bir ceza ver ki  onların yaptıklarının aynısını yapmaya niyetlenecek olanlar  veya bunu aklından geçirenler ürküsün ve kaçsın veya dağılsın gitsin  ve buna yeltenmesinler.  Peki bu ağır ceza ne demektir?  Ne şekilde bir ağır ceza?  Mesela atadan imam razı şöyle aktarıyor.  Onları öldürmede ilerigit ki başkalarına ders olsun.  Yani sadece olarak idam değil, idamın da tabii ki türleri vardır.  Veya bu da yani başkanı fesirlerin reyde açıklaması da şöyledir.  Onlara öyle bir ceza ver ki ahdi bozmak niyetinde olanlar  onları görüp de yapacakları işten vazgeçsinler.

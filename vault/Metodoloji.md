@@ -21,15 +21,16 @@ Metinler, kanalın Türkçe video sohbetlerinin transkriptlerinden hazırlanır.
 
 ### Bu wikiye dâhil edilen kapsam
 
-Bu sürüm, kanaldan seçilmiş **331 ayet tefsiri videosunu** ve bunların kapsadığı beş sûre koleksiyonunu içerir:
+Bu sürüm, kanaldan seçilmiş **393 ayet tefsiri videosunu** ve bunların kapsadığı altı sûre koleksiyonunu içerir:
 
 - **Âl-i İmrân:** 3–200. ayetler. 1–2. ayetleri kapsayan bir kanal videosu tespit edilmediği için bu iki sayfa açıkça kaynaksız olarak işaretlenmiştir.
 - **Nisâ:** 1–176. ayetler.
 - **Mâide:** 1–120. ayetler.
 - **En‘âm:** 1–165. ayetler.
 - **A‘râf:** 1–206. ayetler.
+- **Enfâl:** 1–75. ayetler.
 
-Kanalın diğer sûreleri ve bu koleksiyona alınmamış videoları mevcut sürümün kapsamı dışındadır. Toplam **867 ayet sayfası** bulunur; bir video birden fazla ayeti kapsayabilir ve bir ayet için birden fazla dar kapsamlı sohbet gösterilebilir.
+Kanalın diğer sûreleri ve bu koleksiyona alınmamış videoları mevcut sürümün kapsamı dışındadır. Toplam **942 ayet sayfası** bulunur; bir video birden fazla ayeti kapsayabilir ve bir ayet için birden fazla dar kapsamlı sohbet gösterilebilir.
 
 ### Metnin izlenebilirliği
 

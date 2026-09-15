@@ -1,0 +1,22 @@
+---
+title: "Ham Transkript — Enfal 30-31"
+type: "raw-transcript"
+review_status: "machine-edited"
+row_id: 395
+surah_key: "enfal"
+surah: "Enfâl"
+surah_number: 8
+ayah_start: 30
+ayah_end: 31
+---
+
+# Ham Transkript — Enfal 30-31
+
+> [!warning] Değiştirilmemiş kaynak
+> Bu sayfa hazırlanmış kaynak kaydındaki metni aynen korur.
+
+Yazılı sürüm: [[395 - Enfal 30-31]]
+
+---
+
+30. ayetin önemi şundan ibaret.  Enfali sorasını okumaya başladığımız zaman hatırlayacaksınız.  Dedik ki sonra medeni sorudur.  Ama 30. ayetten 30. ayete kadar olan bölüm Mekke'de nazil olmuştur.  İşte bu 30. ayette o bölümün ilk ayetidir.  Ve bu ayete okuduğumuz zaman da tefsiri Medine'den ve Bedir savaştından daha çok  müslümanların biraz daha yani geçmişi hatırlayın gibisinden.  Mekke'de karşı karşıya kaldıkları durumları anlatan ve ona atıflar bulunan bir ayet gibi.  31. ayet müallen şeylidir.  Onlara ayetlerimiz okunduğu zaman işittik.  Dilersek bunun gibisini biz de söyleriz.  Bu eskilerin efsanelerinden başka bir şey değildir diyorlardı deniyor.  Bunu diyenlerde tabii ki Mekke müşrikleridir.  Yani Rasulullah salallahu aleyhi ve sellem onlara Kur'an-ı Kerim'e anlattığı zaman diyorlar ki  bunlara zaten eskilerin masalları istersek biz de bunlardan anlatırız.  Bu da tabii ki Rasulullah'a kurulan tuzaklar geçen hafta hatırlayacaksınız konuştuk onları.  Özellikle 30. ayet de kafirler senin tutup bağlamak veya öldürmek veya sürüp çıkarmak için sana tuzak kuruyorlardı.  Okumuştuk.  Ve bu da Mekke müşriklerin toplanıp da Muhammed'i nasıl ortadan kaldıralım diye bir meşveret yapmışlardı onu konuştuk.  Orada da karar veriyorlar ki her kabileden bir genç gelsin hepsi kalışlarına olsunlar.  Ondan sonra bir suikast düzenlensin ve hepsi ordaştira kesinler ve böylece de haşım oğulları hiç birisinden gelip  ölç alamazsın çünkü herkese karşı aynı anda düşmanlık yapamazlar zaten.  Ve konuda o şekilde kapansın gitsin ama ondan sonra da Rasulullah'a salallahu aleyhi ve sellem tabii ki bunu haberi geliyor.  O da Hazreti Ali'yi yerine bırakıp o gece Mekke'den çıkmış oluyor.  Ve o konunun peşinden bir de Rasulullah'ın kendi şahsinden başka bir de din aleyhinde müşriklerin yaptıkları eylemler  ve dini ortadan kaldırmak için yaptıkları işler burada söz konusu ediliyor.  Yani Müslümanları, Müslüman olmuş insanları müminleri veya genel olarak İslam'la ilgilenen Müslüman olabilecek herhangi bir şahsı  Allah'ın dininden soytmak için çeşitli şeyler üretiyorlar.  Onlardan bir tanesi de bunlar zaten eskilerin masallarıdır.  Biz de o masallardan anlatabiliriz demeleridır.  Özellikle mesela Nadir Bin Hares diye Mekke'de ünlü tacir siyarda ismi geçiyor.  Bu tacir tabii ki yani tacir olduğu için dünyanın değişik yerlerini gidip geliyor.  Ve iranı gittiği zamanda iranlıların yani farsların eski bir kelele ve dimne diye bir öfzan esi var yani bir masal diyelim artık.  Masallılar, kelele ve dimneyi öğreniyor oradan.  Ondan sonra bu konular açıldığı zaman da diyor ki tamam yani masal diyorsunuz ben de masal anlatayım.  Ben de kelele ve dimneyi anlatırım falan diyor.  Sanki Kur'an'da geçen kısalara bir rakib olsun diye veya onların yerini doldursun diye.  O da işte kendince bir şeyler ortaya koyuyor.  Ve sayır, istersek bunun gibisini biz de anlatırız diyorlar ama Kur'an'ı Kerim de açık açık zaten onlara meydan okuyor.  Bu kitap gibi bir kitap getirin diyor.  İşte bu sorulardan bir tanesi gibi bir soru getirin.  Hiçbirisini yapabilen ve ortaya bir şey koyabilen hiçbir zaman olmamıştır tabii ki.

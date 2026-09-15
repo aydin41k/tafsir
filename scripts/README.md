@@ -42,6 +42,19 @@ and local Supabase insertion with source provenance. Existing external YouTube
 IDs are updated rather than duplicated. Cached captions, metadata, and generated
 descriptions make interrupted imports safe to rerun.
 
+The published Enfâl addition was imported additively from an approved hosted
+snapshot, without running the destructive remote sync. To reproduce its vault
+files from the same export:
+
+```bash
+npm run enfal:import -- /path/to/enfal-export.json
+```
+
+The importer accepts only records declared as `youtube`, allocates local IDs
+372–433 above the existing maximum, handles the multipart `1 (1)`, `1 (2)`,
+`67-1`, `67-2`, and `sebebi nuzul` names, and requires complete 1–75 coverage.
+It never invents a source URL when the export lacks one.
+
 Current channel inventories:
 
 - Âl-i İmrân: 31 videos covering ayahs 3–200. The channel has no titled source
@@ -50,6 +63,7 @@ Current channel inventories:
   the 163–170 video is explicitly corrected during range parsing.
 - Mâide: 28 videos covering all 120 ayahs, including overlapping focused videos
   for the opening ayahs.
+- Enfâl: 62 YouTube transcript records covering all 75 ayahs.
 
 Audit imported rows at any time:
 
