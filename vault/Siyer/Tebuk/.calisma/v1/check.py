@@ -28,7 +28,7 @@ SPEC = {
    last='helâk olmamamdan daha büyük hiçbir nimet vermedi."'),
  's8': dict(title='Kaynaklar', lo=900, hi=1600,
    first="Hamd, bize bu sayfaları yazmayı ve okumayı, Resûlullah'ın ve ashâbının o darlık saatini öğrenmeyi nasip eden Allah'adır.",
-   last='bu kitapta onun sözüdür.'),
+   last='diyerek şükretmektir.'),
 }
 
 MODERN = r'moral|lojistik|istihbarat|strateji|propaganda|finanse|organize|koordinasyon|motivasyon|pozisyon|operasyon|kapasite|travma|depresyon|psikoloj|\bego\b|boykot|Bizans'

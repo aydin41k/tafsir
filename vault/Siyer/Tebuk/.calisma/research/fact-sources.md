@@ -289,6 +289,16 @@ Not: Bazı tahmin edilen URL'ler (slug) DİA'da arama sayfasına yönleniyordu; 
 
 ---
 
+## 21. Elmalılı Muhammed Hamdi Yazır (meal)
+
+- **URL:** https://islamansiklopedisi.org.tr/elmalili-muhammed-hamdi (Yusuf Şevki Yavuz, 1995; erişim 01.11.2026)
+- **Doğum:** 1878, Antalya'nın Elmalı ilçesi. «Antalya’nın Elmalı ilçesinde doğdu.» Soyadı Yazır, babasının köyünden.
+- **İstanbul:** «İstanbul’a gitti ve Küçük Ayasofya Medresesi’ne yerleşti (1895).»
+- **Görevler:** «II. Meşrutiyet’in ilk meclisine Antalya mebusu olarak girdi»; Dârü'l-hikmeti'l-İslâmiyye «âzalığına, bir müddet sonra da bu müessesenin reisliğine tayin edildi»; Damad Ferid Paşa hükümetlerinde «Evkaf nâzırı».
+- **Tefsir:** «Türkiye Büyük Millet Meclisi’nde Türkçe bir tefsir hazırlatılması kararı alınınca Diyanet İşleri Reisliği bu işi kendisine teklif etti.» *Hak Dini Kur’an Dili*: «Kırk sekiz yaşında iken başlayıp altmış yaşında tamamladığı tefsiri… İlk defa Diyanet İşleri Reisliği tarafından yayımlanan eserin (İstanbul 1935-1938)».
+- **Ölüm:** «27 Mayıs 1942’de… Erenköy’de damadının evinde vefat etti ve Sahrayıcedid Mezarlığı’na defnedildi.»
+- **Metin:** Kitapta kullanılan meal, alquran.cloud `tr.yazir` (sadeleştirilmiş şekil); `research/texts/elmalili-9.txt`, `elmalili-30.txt`. 1935 baskısının dili değildir.
+
 ## UNVERIFIED özeti
 
 1. İbn Hişâm: doğum yılı DİA'da yok (yalnız «Basra’da doğdu»).

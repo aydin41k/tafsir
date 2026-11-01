@@ -200,9 +200,11 @@ kendi cümlesidir. Bunun mânâsı:
   **anlatıcının cümlesi** değişir. Sabit cümleler de buna dahildir.
 - İmlâ kuralları (Hz., ﷺ, ad şekilleri) **tırnağın içine uygulanmaz**; tırnak içindeki rivayet farkı parantezleri de buna dahildir (aydin4ik: s6'daki parantezde "Ümmü Seleme" Hz.'siz kalır). Ka'b
   "Resûlullah" der, Hz. Ömer "Ebû Bekir" der; öyle kalır.
-- Âyet meali Arapçanın sadık tercümesidir; Diyanet meali yol gösterir. Diyanet'in
-  parantez içi açıklamaları âyetin parçası değildir ve tırnağa alınmaz; lâzımsa
-  anlatıcının cümlesinde verilir.
+- Âyet meali Elmalılı Hamdi Yazır'ın mealidir (sadeleştirilmiş şekli,
+  `research/texts/elmalili-9.txt`, `elmalili-30.txt`), tırnak içinde aynen verilir;
+  hadis içinde geçen âyetler de (aydin4ik: "instead of Diyanet meali, use Elmalili
+  meali throughout"). Elmalılı'nın parantez içi açıklamaları âyetin parçası değildir
+  ve tırnağa alınmaz; lâzımsa anlatıcının cümlesinde verilir.
 
 ## SÖZ, ANLATILMAZ; SÖYLENİR (Bedir v2'nin kaidesi, burada baştan geçerli)
 
@@ -505,8 +507,7 @@ bekkâûn, bedrî, sâ', cizye, ceyşü'l-usre, muhallefûn.
   Zemahşerî, Âlûsî, İbn Âşûr.
 - İbn Kesîr, *el-Bidâye*; İbn Kayyim, *Zâdü'l-me'âd* (III); İbn Hacer,
   *el-İsâbe*.
-- Türkçe meal dili için Diyanet meali; kitap meali kendi cümlesiyle kurar,
-  fakat mânadan ayrılmaz.
+- Türkçe meal: Elmalılı Hamdi Yazır, *Hak Dini Kur'an Dili* meali (sadeleştirilmiş).
 
 ## BÖLÜMLER VE KELİME BANDI
 

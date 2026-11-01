@@ -9,7 +9,7 @@ chapter: 6
 
 Hz. Muhammed ﷺ Tebük'ten Ramazan 9'da (Aralık 630) döndü. İbn İshak'a göre aynı ay Tâif'ten Sakîf heyeti onun yanına geldi.
 
-Sûre o sabahı doksan dört ile doksan altıncı âyetlerde anar. Doksan dördüncü âyet: "Onlara döndüğünüzde size mazeret beyan edeceklerdir. De ki: Mazeret beyan etmeyin; size kesinlikle inanmayız. Çünkü Allah bize sizin durumunuzu bildirdi..." Doksan beşinci âyet, kendilerini rahat bırakmaları için Allah adına yemin edeceklerini söyler. Doksan altıncı âyet: "Kendilerinden razı olasınız diye size yemin edeceklerdir. Siz onlardan razı olsanız bile Allah o fâsıklar topluluğundan asla razı olmaz." Yüz altıncı âyet ise başka bir grubu anar: işleri Allah'ın emrine bırakılmış diğerleri; Allah ya onlara azap eder ya tevbelerini kabul eder. Taberî'nin naklettiğine göre Mücâhid, İkrime, Katâde ve İbn Abbas bu âyetin işi ertelenen üç kişi hakkında olduğunu söyler.
+Sûre o sabahı doksan dört ile doksan altıncı âyetlerde anar. Doksan dördüncü âyet: "Savaştan dönüp yanlarına geldiğinizde size özür beyan edecekler. De ki: 'Özür beyan etmeyin. Size kesinlikle inanmayız. Allah bize, sizin durumunuzdan haberler verdi.' (…)" Doksan beşinci âyet, kendilerini rahat bırakmaları için Allah adına yemin edeceklerini söyler. Doksan altıncı âyet: "Kendilerinden razı olasınız diye size yemin ederler. Eğer siz onlardan razı olursanız, şunu bilin ki Allah, o fasıklar güruhundan kesinlikle razı olmaz." Yüz altıncı âyet ise başka bir grubu anar: işleri Allah'ın emrine bırakılmış diğerleri; Allah ya onlara azap eder ya tevbelerini kabul eder. Taberî'nin naklettiğine göre Mücâhid, İkrime, Katâde ve İbn Abbas bu âyetin işi ertelenen üç kişi hakkında olduğunu söyler.
 
 Dönüş sabahı mescitte olanları ve ardından gelen elli geceyi Ka'b'dan dinleyelim:
 
