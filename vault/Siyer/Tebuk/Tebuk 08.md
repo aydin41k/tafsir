@@ -41,8 +41,8 @@ Bu rivayetleri bir araya getiren büyük tefsirlerin ilki Taberî'nindir. Ebû C
 
 İbn Kesîr 701'de (1301-1302) Busrâ'ya bağlı bir köyde doğdu, çocukken Dımaşk'a gitti (Suriye) ve 774'te (1373) orada vefat etti. İbn Teymiyye'den ders aldı ve vasiyeti üzerine onun yanına defnedildi. Tefsîrü'l Kur'âni'l Azîm adlı tefsiri rivayet tefsirleri arasında Taberî'ninkinden sonra en meşhur olanıdır ve rivayetleri hem sağlamlık hem mânâ bakımından titizlikle değerlendirir. el-Bidâye ve'n Nihâye adlı on dört ciltlik tarihi, bu kitapta Hz. Ömer'in susuzluk rivayetini ve Akabe gecesine dair rivayetleri bir araya getiren eserdir.
 
-Âyetlerin Türkçesi Elmalılı Muhammed Hamdi Yazır'ın mealindendir. 1878'de Antalya'nın Elmalı ilçesinde doğdu ve 1895'te tahsil için İstanbul'a gitti. II. Meşrutiyet'in ilk meclisine Antalya mebusu olarak girdi; daha sonra Dârü'l-hikmeti'l-İslâmiyye'nin reisi ve Evkaf nâzırı oldu. Türkiye Büyük Millet Meclisi Türkçe bir tefsir hazırlatmaya karar verince Diyanet İşleri Reisliği bu işi ona teklif etti. Hak Dini Kur'an Dili adlı tefsirine kırk sekiz yaşında başladı ve altmış yaşında bitirdi; eser ilk defa 1935-1938 yıllarında yayımlandı. 27 Mayıs 1942'de İstanbul'da vefat etti. Bu kitaptaki mealler, onun mealinin sadeleştirilmiş şeklinden alınmıştır.
+Elmalılı Muhammed Hamdi Yazır, 1878'de Antalya'nın Elmalı ilçesinde doğdu ve 1895'te tahsil için İstanbul'a gitti. II. Meşrutiyet'in ilk meclisine Antalya mebusu olarak girdi; daha sonra Dârü'l Hikmeti'l İslâmiyye'nin reisi ve Evkaf nâzırı oldu. Türkiye Büyük Millet Meclisi Türkçe bir tefsir hazırlatmaya karar verince Diyanet İşleri Reisliği bu işi ona teklif etti. Hak Dini Kur'an Dili adlı tefsirine kırk sekiz yaşında başladı ve altmış yaşında bitirdi; eser ilk defa 1935-1938 yıllarında yayımlandı. 27 Mayıs 1942'de İstanbul'da vefat etti. Bu kitaptaki mealler, onun mealinin sadeleştirilmiş şeklinden alınmıştır.
 
-Allah hepsine rahmet eylesin.
+Bu kitapta adı geçen ve geçmeyen bütün âlimlere Allah rahmet eylesin.
 
-Dualarımızın sonu, "Alemlerin Rabbi Allah'a hamdolsun" diyerek şükretmektir.
+Dualarımızın sonu, "Âlemlerin Rabbi Allah'a hamdolsun" diyerek şükretmektir.
