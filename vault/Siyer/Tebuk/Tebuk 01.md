@@ -1,0 +1,32 @@
+---
+title: "Darlık Saati - Tebük Seferi 1: Kuzeyden Gelen Haber"
+type: "note"
+book: "Darlık Saati - Tebük Seferi"
+chapter: 1
+---
+
+# Darlık Saati - Tebük Seferi
+
+## Kuzeyden Gelen Haber
+
+Sekizinci yılın sonunda Arabistan'ın hâli birkaç ay içinde değişmişti. Mekke fethedilmiş, yıllarca Hz. Muhammed'e ﷺ karşı ordu çıkaran şehir kapılarını açmıştı. Ardından Huneyn gelmiş, Tâif kuşatılmıştı. Medine'nin etrafında artık düşman bir şehir yoktu; kuzeyinde ise bir imparatorluğun sınırı vardı.
+
+O imparatorluk Rûm'du: Konstantinopolis'teki başşehrinden yönetilen ve Arapların hükümdarına Kayser dediği Doğu Roma. Rûm, Tebük'ten birkaç yıl önce Sâsânî İran'ıyla yaptığı uzun bir savaştan galip çıkmıştı. Sâsânîler 613'te Dımaşk'ı, ertesi yıl Kudüs'ü almış, Hıristiyanların Hz. Îsâ'nın gerildiğine inandığı haçı Medâin'e götürmüş, 619'da Mısır'ı da işgal etmişlerdi. İmparator Herakliyus 622'de başşehirden çıkıp karşı sefere başladı; 627 yılının sonunda Sâsânîlerin ana ordusunu Ninova'da yendi ve ertesi yıl yapılan barışla kaybedilen topraklar Rûm'a geri verildi. Kur'an bu savaşın başını ve sonunu Rûm sûresinde anar: "Rumlar, yakın bir yerde yenilgiye uğratıldılar. Onlar yenilgilerinden sonra birkaç yıl içinde galip geleceklerdir." Buhârî'nin rivayetinde İbn Abbas, Allah Fars ordularını Kayser'in üstünden kaldırınca Kayser'in bu nimete şükür için Hıms'tan İlyâ'ya, yani Kudüs'e yürüyerek gittiğini söyler; Hz. Peygamber'in onu İslâm'a çağıran mektubu ona orada ulaştı.
+
+Rûm'un güneyde, çöle bakan sınırında Arap kabileleri nöbet tutuyordu. Bunların en tanınmışı Gassânîlerdi: Rûm'un vasalı olan, Hıristiyanlığı kabul etmiş ve Suriye'de Rûm'un güneyini koruyan bir tampon güç olmuş bir Arap hânedanı. Hz. Peygamber'in zamanında artık tek bir devlet hâlinde değillerdi, fakat emîrleri Busrâ gibi sınır şehirlerinde oturuyordu. Hz. Peygamber'in Busrâ'ya gönderdiği elçi Hâris b. Umeyr, Gassânî emîri Şürahbîl b. Amr'ın topraklarından geçerken öldürülmüştü. Medine'nin kuzeyde karşı karşıya kaldığı güç, İran'ı yeni yenmiş bir imparatorluk ile onun sınırını bekleyen Hıristiyan Arap kabileleriydi.
+
+O sınır Medine için yabancı değildi. Bir yıl kadar önce, Cemâziyelevvel 8'de (Eylül 629), elçinin öldürülmesi üzerine Hz. Peygamber'in gönderdiği bir ordu kuzeye, Belkâ denen yere gitmiş ve Mu'te'de Rûm'un ve bölgenin Hıristiyan Arap kabilelerinin karşısına çıkmıştı. Sancağı önce Zeyd b. Hârise aldı ve şehit oldu; sonra Ca'fer aldı, o da şehit oldu; İbn Hişâm'ın, adını vermediği bir ilim ehlinden naklettiğine göre Ca'fer sancağı tutan iki kolunu da kaybetti ve sancağı göğsüne bastırarak tutuyordu. Sonra Abdullah b. Revâha sancağı aldı ve o da şehit düştü. Sonunda Hâlid b. Velîd aldı ve orduyu geri çekti. Ordu Medine'ye üç sancaktarını kaybetmiş olarak döndü; Abdullah b. Revâha'nın şehit olmasıyla Hz. Peygamber'in üç şairinden biri de eksilmişti. Mu'te, Tebük'ün de kuzeyindeydi.
+
+Haber kuzeyden, kuzeyin malını getiren adamlarla geldi. Vâkıdî'ye göre Şam'dan Medine'ye un ve zeytinyağı taşıyan Nebatî tüccarlar, Rûm'un büyük bir ordu topladığını, Lahm, Cüzâm, Âmile ve Gassân kabilelerinin ona katıldığını, öncülerinin Belkâ'ya kadar indiğini söylediler; Herakliyus ise Hıms'ta kalmıştı. İbn Sa'd aynı haberi Nebatîlerin adını anmadan verir; İbn İshak ise bu haberden hiç söz etmez. Haberin ne kadar doğru olduğu bu hikâyenin sonlarına doğru tartılacak. Medine'nin kuzeyi gören başka gözü yoktu; o yolu yürüyen tüccarlar gördüklerini ve işittiklerini söyler, Medine kuzeyi o kadar bilirdi.
+
+Mu'te'den sonra Medine'nin bu haberi hafife alması mümkün değildi; fakat ciddiye almanın da bir bedeli vardı. Medine ile Tebük arası, kuzeye giden yol boyunca 700 km kadardır; Bedir yolunun beş katı kadar. Tebük, Medine'nin kuzeyde sınır diyebileceği yerdi: Şam diyarının eşiğinde bir konak. Oraya varmak için çölün içinden, kuyudan kuyuya, haftalarca yürümek gerekirdi. Kuzeye bir ordu çıkarmak, bir kervanı yolunda kesmek gibi değildi; bütün bir şehri yerinden kaldırıp haftalarca yolda tutmak demekti. Ve bunu, Medine'nin yılın en zor zamanında yapması gerekecekti.
+
+Çağrı, meyvenin olgunlaştığı bir mevsimde geldi. İbn İshak o zamanı kısaca tarif eder: insanlar darlık içindeydi, sıcak şiddetliydi, memleket kuraklık içindeydi; meyveler olgunlaşmıştı ve insanlar meyvelerinin, gölgelerinin başında kalmayı istiyordu. Medine hurmalıklarıyla geçinen bir şehirdi; olgunlaşan meyve toplanmazsa dökülür, çürür; toplanırsa bir hanenin yıllık geçimi ondan çıkardı. Darlık, o gelirin o yıl daha da lâzım olduğu demekti; kuraklık, yolda suyun az bulunacağının; sıcak, her günün ağır yürüneceğinin belirtisiydi.
+
+O günleri yaşamış olan bir ses de vardır. Ka'b b. Mâlik gözlerini kaybettiğinde, oğulları arasından ona rehberlik eden Abdullah'tı. Abdullah, babasının Tebük'ten geri kalışını anlatmasını dinledi ve işittiğini aktardı; Buhârî ile Müslim bu nakli uzun uzun, aralarında ufak farklarla kaydeder. Bu, bir sahâbînin kendi kusurunu kendi ağzından uzun uzun anlattığı ender bir rivayettir.
+
+Ka'b, Yesrib'in Hazrec kabilesinden, Benî Seleme kolundandı. Hz. Peygamber henüz Mekke'deyken ona İslâm üzere söz veren Yesribli adamların arasındaydı; bu söz Mekke'de, Akabe denen yerde, geceleyin verilmişti (Akabe Biatı). Sonra Medine'de Hz. Peygamber'in üç şairinden biri oldu; ötekiler Hassân b. Sâbit ile Mu'te'de şehit düşen Abdullah b. Revâha idi. Şiir o toplumda süs değildi; bir kabilenin kimliğini oluşturan ve bir muharebenin ardından dilden dile dolaşan sözdü.
+
+Abdullah'ın naklinde Ka'b şöyle başlar: "Resûlullah'ın yaptığı gazvelerin hiçbirinden, Tebük gazvesi dışında, geri kalmadım. Yalnız Bedir gazvesinden geri kalmıştım; fakat ondan geri kalan hiç kimse kınanmadı. Resûlullah ancak Kureyş'in kervanını istemek için çıkmıştı; sonunda Allah onlarla düşmanlarını sözleşmeden bir araya getirdi. Ben Resûlullah'la beraber, İslâm üzere birbirimize ahid verdiğimiz Akabe gecesinde bulundum. Bedir insanlar arasında ondan daha çok anılsa da, onun yerine Bedir'de bulunmuş olmayı istemem."
+
+Bu kitap bundan sonra iki yolu birlikte yürüyecek. Biri, Medine'den çıkıp kuzeye giden ordunun yoludur. Öteki, o ordunun ardından Medine'de kalan bir adamın yoludur. İki yol ayrı mekânlarda ilerler ve bir sabah aynı mescitte birbirine kavuşur. Ordunun yolunu kaynaklar anlatır; öteki yolu ise Ka'b'dan başka anlatan yoktur.
